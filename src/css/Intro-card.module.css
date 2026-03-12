@@ -1,0 +1,221 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: calc(100vh - 120px);
+  padding: 80px 0 80px;
+  text-align: left;
+  position: relative;
+}
+
+/* Dot grid background — full screen width */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 1em;
+  opacity: 0.5;
+  margin: 0 0 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.name {
+  font-size: 4.2em;
+  margin: 0 0 12px;
+  line-height: 1;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #a8b4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 0 0 24px;
+  opacity: 0.65;
+}
+
+.bio {
+  font-size: 0.97em;
+  line-height: 1.8;
+  max-width: 480px;
+  opacity: 0.75;
+  margin: 0 0 36px;
+}
+
+.ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  padding: 11px 26px;
+  background-color: #646cff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.93em;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaPrimary:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(100, 108, 255, 0.35);
+  color: white;
+}
+
+.ctaSecondary {
+  display: inline-block;
+  padding: 11px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.93em;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.ctaSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+/* CV downloads */
+.cvRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cvLabel {
+  font-size: 0.78em;
+  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cvLink {
+  font-size: 0.82em;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cvLink:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.heroImage {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.photoPlaceholder {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.9em;
+  background: radial-gradient(circle at center, rgba(100, 108, 255, 0.08) 0%, transparent 70%);
+}
+
+@media (max-width: 680px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 28px;
+    min-height: unset;
+    padding: 60px 0;
+  }
+
+  .name {
+    font-size: 2.8em;
+  }
+
+  .tagline {
+    font-size: 1.1em;
+  }
+
+  .photoPlaceholder {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hero::before {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  }
+
+  .name {
+    background: linear-gradient(135deg, #1a1a2e 0%, #646cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .ctaSecondary {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .ctaSecondary:hover {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .photoPlaceholder {
+    border-color: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.25);
+    background: radial-gradient(circle at center, rgba(100, 108, 255, 0.06) 0%, transparent 70%);
+  }
+
+  .cvLink {
+    color: rgba(0, 0, 0, 0.45);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .cvLink:hover {
+    color: #1a1a2e;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}

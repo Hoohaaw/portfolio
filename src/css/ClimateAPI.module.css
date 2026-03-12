@@ -1,0 +1,86 @@
+.intro {
+  font-size: 1.1em;
+  line-height: 1.75;
+  margin-top: 16px;
+  max-width: 720px;
+  opacity: 0.85;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.techName {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.techDesc {
+  font-size: 0.85em;
+  opacity: 0.55;
+}
+
+.resourceList {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.resourceList li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.codeBlock {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.subHeading {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 24px;
+  opacity: 0.8;
+}
+
+.inlineCode {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: light) {
+  .techItem {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .codeBlock {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .inlineCode {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+}

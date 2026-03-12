@@ -1,0 +1,146 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
+.intro {
+  margin-bottom: 56px;
+}
+
+.intro h1 {
+  margin-bottom: 8px;
+}
+
+.intro p {
+  opacity: 0.6;
+  font-size: 1.05em;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+.sectionLabel {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.card:hover {
+  border-color: rgba(100, 108, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(100, 108, 255, 0.12);
+  color: inherit;
+}
+
+.cardMuted {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.cardMuted:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.tagDev {
+  background-color: #3a3a6e;
+  color: #a8b4ff;
+}
+
+.tagUX {
+  background-color: #4a2010;
+  color: #ffaa80;
+}
+
+.cardTitle {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.cardDesc {
+  font-size: 0.88em;
+  line-height: 1.6;
+  opacity: 0.7;
+  margin: 0;
+  flex: 1;
+}
+
+.externalHint {
+  margin-top: 16px;
+  font-size: 0.82em;
+  opacity: 0.5;
+}
+
+.comingSoon {
+  margin-top: 16px;
+  font-size: 0.82em;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .cardMuted:hover {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .tagDev {
+    background-color: #e8eaff;
+    color: #3d45b0;
+  }
+
+  .tagUX {
+    background-color: #fff0e8;
+    color: #b04010;
+  }
+}
