@@ -33,7 +33,7 @@ function Contact() {
           <div className={styles.cardIcon}>in</div>
           <div className={styles.cardContent}>
             <span className={styles.cardLabel}>LinkedIn</span>
-            <span className={styles.cardValue}>alex-palm-0b70091b6</span>
+            <span className={styles.cardValue}>Alex Palm</span>
             <span className={styles.cardHint}>Opens in new tab</span>
           </div>
           <span className={styles.cardArrow}>→</span>
