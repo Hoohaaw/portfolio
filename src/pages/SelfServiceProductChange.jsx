@@ -1,7 +1,16 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../css/SelfServiceProductChange.module.css';
 
+const slides = [
+  { src: '/images/pc_3.avif', alt: 'Locked article — steg 2/4' },
+  { src: '/images/pc_4.avif', alt: 'Locked article — steg 3/4' },
+  { src: '/images/pc_5.avif', alt: 'Locked article — steg 4/4' },
+];
+
 function SelfServiceProductChange() {
+  const [current, setCurrent] = useState(0);
+
   return (
     <div className={styles.page}>
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
@@ -101,11 +110,23 @@ function SelfServiceProductChange() {
           Efter ett lyckat byte laddas sidan om och artikeln är magiskt upplåst!
         </p>
 
-        <div className={styles.imageGrid}>
-          <img src="/images/pc_2.avif" alt="Locked article — steg 1/4" className={styles.caseImage} />
-          <img src="/images/pc_3.avif" alt="Locked article — steg 2/4" className={styles.caseImage} />
-          <img src="/images/pc_4.avif" alt="Locked article — steg 3/4" className={styles.caseImage} />
-          <img src="/images/pc_5.avif" alt="Locked article — steg 4/4" className={styles.caseImage} />
+        <img src="/images/pc_2.avif" alt="Locked article — steg 1/4" className={styles.caseImage} />
+
+        <div className={styles.slider}>
+          <img src={slides[current].src} alt={slides[current].alt} className={styles.sliderImage} />
+          <div className={styles.sliderControls}>
+            <button
+              className={styles.sliderBtn}
+              onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
+              aria-label="Previous"
+            >&#8592;</button>
+            <span className={styles.sliderCounter}>{current + 2} / 4</span>
+            <button
+              className={styles.sliderBtn}
+              onClick={() => setCurrent((current + 1) % slides.length)}
+              aria-label="Next"
+            >&#8594;</button>
+          </div>
         </div>
       </section>
 
