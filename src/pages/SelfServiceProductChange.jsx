@@ -4,9 +4,9 @@ import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import styles from '../css/SelfServiceProductChange.module.css';
 
 const slides = [
-  { src: '/images/pc_3.avif', alt: 'Locked article — steg 2/4' },
-  { src: '/images/pc_4.avif', alt: 'Locked article — steg 3/4' },
-  { src: '/images/pc_5.avif', alt: 'Locked article — steg 4/4' },
+  { src: '/images/pc_3.avif', alt: 'Locked article — steg 1/3' },
+  { src: '/images/pc_4.avif', alt: 'Locked article — steg 2/3' },
+  { src: '/images/pc_5.avif', alt: 'Locked article — steg 3/3' },
 ];
 
 function SelfServiceProductChange() {
