@@ -8,7 +8,7 @@ function About() {
         <div className={styles.heroText}>
           <h1 className={styles.name}>Alex Palm</h1>
           <h2 className={styles.tagline}>Fullstack Developer & UX Designer</h2>
-          <p className={styles.location}>📍 [Your city], Sweden</p>
+          <p className={styles.location}>📍 Madrid, Spain / Kalmar, Sweden</p>
         </div>
         <div className={styles.photoPlaceholder}><span>Photo</span></div>
       </div>
@@ -25,8 +25,11 @@ function About() {
           actually get built.
         </p>
         <p>
-          [Add 1–2 sentences about why you decided to study frontend development and what
-          excites you about the combination of design and code.]
+          That curiosity led me to enroll in the Web Developer Program at Linnaeus University in
+          2024, where I'm building on my design foundation with fullstack development skills.
+          The combination of design thinking and technical ability is what I find most exciting
+          — being able to take an idea from concept to working product, with the user in mind
+          at every step.
         </p>
         <p>
           Today I bring both perspectives to every project. I think about users when I write
@@ -48,14 +51,17 @@ function About() {
               <li>CSS Modules</li>
               <li>Vite</li>
               <li>React Router</li>
+              <li>Flutter</li>
             </ul>
           </div>
           <div className={styles.skillGroup}>
             <h3 className={styles.skillGroupTitle}>Backend & Data</h3>
             <ul className={styles.skillList}>
               <li>Node.js</li>
+              <li>Express</li>
               <li>GraphQL & Apollo Server</li>
               <li>MongoDB & Mongoose</li>
+              <li>SQL</li>
               <li>REST APIs</li>
               <li>JWT Authentication</li>
             </ul>
@@ -64,9 +70,12 @@ function About() {
             <h3 className={styles.skillGroupTitle}>Testing & Tooling</h3>
             <ul className={styles.skillList}>
               <li>Jest (unit testing)</li>
+              <li>Playwright (E2E testing)</li>
               <li>Postman & Newman</li>
               <li>CI/CD pipelines</li>
               <li>Git & GitHub / GitLab</li>
+              <li>Vercel</li>
+              <li>Jira / Agile & Scrum</li>
               <li>NPM package publishing</li>
             </ul>
           </div>
@@ -74,10 +83,12 @@ function About() {
             <h3 className={styles.skillGroupTitle}>UX & Design</h3>
             <ul className={styles.skillList}>
               <li>Figma</li>
+              <li>Adobe XD & Sketch</li>
+              <li>Adobe Illustrator & Photoshop</li>
+              <li>Useberry & Maze</li>
               <li>WCAG 2.2 / Accessibility</li>
               <li>User research & testing</li>
               <li>Design systems</li>
-              <li>[Add other tools you use]</li>
             </ul>
           </div>
         </div>
@@ -90,27 +101,72 @@ function About() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>[Start year] — [End year]</span>
-              <span className={styles.timelineCompany}>Gota Media</span>
+              <span className={styles.timelineDate}>Summers 2023, 2024, 2025</span>
+              <span className={styles.timelineCompany}>Electronic Arts — Madrid, Spain</span>
             </div>
             <div className={styles.timelineContent}>
-              <h3 className={styles.timelineRole}>UX Designer</h3>
+              <h3 className={styles.timelineRole}>Localization Tester (Seasonal Contract)</h3>
               <p>
-                Designed digital products and user flows for a media group reaching 1.2 million
-                readers across 39 municipalities. Led UX work on subscription self-service,
-                accessibility improvements (WCAG 2.2), and internal design process development.
+                Performed localisation testing for FIFA / EA FC across Swedish and English markets.
+                Logged, tracked, and reproduced bugs using Jira in an agile team environment.
+                Collaborated with cross-functional QA and development teams to ensure linguistic
+                and functional quality.
               </p>
-              <p>[Add any other highlights or responsibilities.]</p>
             </div>
           </div>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>[Year] — [Year]</span>
-              <span className={styles.timelineCompany}>[Other company or role if applicable]</span>
+              <span className={styles.timelineDate}>Jun 2021 — Dec 2022</span>
+              <span className={styles.timelineCompany}>Gota Media AB — Kalmar, Sweden</span>
             </div>
             <div className={styles.timelineContent}>
-              <h3 className={styles.timelineRole}>[Role title]</h3>
-              <p>[Short description]</p>
+              <h3 className={styles.timelineRole}>Interaction Designer</h3>
+              <p>
+                Designed digital products and user flows for a media group reaching 1.2 million
+                readers across 39 municipalities. Led projects from pre-study through implementation,
+                conducted accessibility research to support WCAG compliance, and established UX team
+                workflows and routines to improve collaboration and quality standards.
+              </p>
+            </div>
+          </div>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>Feb 2021 — Jun 2021</span>
+              <span className={styles.timelineCompany}>Webhelp Nordic</span>
+            </div>
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineRole}>Sales Advisor</h3>
+              <p>
+                Managed customer relationships across two teams, handling subscription maintenance,
+                upselling, and win-back campaigns.
+              </p>
+            </div>
+          </div>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>Sep 2019 — Jan 2020</span>
+              <span className={styles.timelineCompany}>Gota Media AB — Kalmar, Sweden</span>
+            </div>
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineRole}>Interaction Design Intern</h3>
+              <p>
+                Developed user-centred interface solutions and digital prototypes in Sketch.
+                Produced illustrations in Adobe Illustrator used across Gota Media's premium
+                news pages.
+              </p>
+            </div>
+          </div>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>Feb 2018 — Feb 2019</span>
+              <span className={styles.timelineCompany}>Studentföreningen Prima Ingenjörer, LNU</span>
+            </div>
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineRole}>Secretary</h3>
+              <p>
+                Managed administrative duties and official documentation for the LNU engineering
+                student association.
+              </p>
             </div>
           </div>
         </div>
@@ -123,25 +179,42 @@ function About() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>[Start year] — [End year]</span>
-              <span className={styles.timelineCompany}>Linnéuniversitetet</span>
+              <span className={styles.timelineDate}>2024 — 2026 (expected)</span>
+              <span className={styles.timelineCompany}>Linnaeus University (LNU) — Kalmar, Sweden</span>
             </div>
             <div className={styles.timelineContent}>
-              <h3 className={styles.timelineRole}>Frontend Development</h3>
+              <h3 className={styles.timelineRole}>Web Developer Program</h3>
               <p>
-                [Add programme name. Relevant courses include: API Design, Software Testing,
-                Web Development, UX Design.]
+                Fullstack development: JavaScript, Node.js, React, MongoDB, SQL, REST APIs,
+                GraphQL. App development with Flutter (Android); Testing with Jest & Playwright;
+                CI/CD; Web Security.
               </p>
             </div>
           </div>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>[Years]</span>
-              <span className={styles.timelineCompany}>[Previous school if relevant]</span>
+              <span className={styles.timelineDate}>2017 — 2020</span>
+              <span className={styles.timelineCompany}>Linnaeus University (LNU) — Kalmar, Sweden</span>
             </div>
             <div className={styles.timelineContent}>
-              <h3 className={styles.timelineRole}>[Programme or degree]</h3>
-              <p>[Short description]</p>
+              <h3 className={styles.timelineRole}>Bachelor's Programme — Interaction Design</h3>
+              <p>
+                UX research, user testing, digital prototyping, agile project methods, and
+                data-driven design.
+              </p>
+            </div>
+          </div>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>2014 — 2017</span>
+              <span className={styles.timelineCompany}>Lars Kagg Gymnasiet</span>
+            </div>
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineRole}>Technology Programme — Media & Design</h3>
+              <p>
+                Technical upper secondary programme with media and design focus. Extended with
+                English 7 and Service & Customer Relations.
+              </p>
             </div>
           </div>
         </div>
@@ -157,7 +230,12 @@ function About() {
           handoff, I know how much smoother projects go when those two perspectives are aligned
           from the start.
         </p>
-        <p>[Add a few sentences about your working style, what you value in a team, or what kinds of problems excite you.]</p>
+        <p>
+          I prefer working in cross-functional teams where design and engineering are in constant
+          dialogue. I'm drawn to problems where clarity of UX and quality of implementation both
+          matter — and I'm comfortable taking ownership of work from end to end, whether that
+          means running user research, designing in Figma, or shipping backend logic.
+        </p>
       </section>
 
       <hr className={styles.divider} />
@@ -171,7 +249,11 @@ function About() {
           </div>
           <div className={styles.langItem}>
             <span className={styles.langName}>English</span>
-            <span className={styles.langLevel}>Professional</span>
+            <span className={styles.langLevel}>Fluent — C2</span>
+          </div>
+          <div className={styles.langItem}>
+            <span className={styles.langName}>Spanish</span>
+            <span className={styles.langLevel}>Learning</span>
           </div>
         </div>
       </section>
