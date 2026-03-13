@@ -86,9 +86,7 @@ function SelfServiceProductChange() {
           sedan göra sitt beslut.
         </p>
 
-        <div className={styles.imagePlaceholder}>
-          <span>Image: Subscription card comparison — Desktop view</span>
-        </div>
+        <img src="/images/pc_1.avif" alt="Subscription card comparison — Desktop view" className={styles.caseImage} />
 
         <p>
           Komponenten som användaren möts av när de inte har tillgång till en artikel hänvisade
@@ -104,10 +102,10 @@ function SelfServiceProductChange() {
         </p>
 
         <div className={styles.imageGrid}>
-          <div className={styles.imagePlaceholder}><span>Locked article — steg 1/4</span></div>
-          <div className={styles.imagePlaceholder}><span>Locked article — steg 2/4</span></div>
-          <div className={styles.imagePlaceholder}><span>Locked article — steg 3/4</span></div>
-          <div className={styles.imagePlaceholder}><span>Locked article — steg 4/4</span></div>
+          <img src="/images/pc_2.avif" alt="Locked article — steg 1/4" className={styles.caseImage} />
+          <img src="/images/pc_3.avif" alt="Locked article — steg 2/4" className={styles.caseImage} />
+          <img src="/images/pc_4.avif" alt="Locked article — steg 3/4" className={styles.caseImage} />
+          <img src="/images/pc_5.avif" alt="Locked article — steg 4/4" className={styles.caseImage} />
         </div>
       </section>
 

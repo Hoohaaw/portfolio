@@ -90,6 +90,13 @@
   margin: 24px 0;
 }
 
+.caseImage {
+  width: 100%;
+  border-radius: 12px;
+  margin: 24px 0;
+  display: block;
+}
+
 @media (max-width: 600px) {
   .page {
     padding: 48px 16px 80px;

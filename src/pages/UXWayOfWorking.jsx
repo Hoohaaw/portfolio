@@ -44,9 +44,7 @@ function UXWayOfWorking() {
           inte bara UX-designers.
         </p>
 
-        <div className={styles.imagePlaceholder}>
-          <span>Image: Bootcamp tonalitetskarta</span>
-        </div>
+        <img src="/images/bootcamp_1.avif" alt="Bootcamp tonalitetskarta" className={styles.caseImage} />
 
         <p>
           Det gäller att kultivera en strävan att vilja veta mer och bli bättre. Det är väldigt
@@ -72,9 +70,7 @@ function UXWayOfWorking() {
           arbetade med dem och sedan till "Klart".
         </p>
 
-        <div className={styles.imagePlaceholder}>
-          <span>Image: Standup board i Figma</span>
-        </div>
+        <img src="/images/bootcamp_2.avif" alt="Standup board i Figma" className={styles.caseImage} />
 
         <p>
           Jag upptäckte att detta var en tydlig förbättring i mitt arbete. Att planera de små

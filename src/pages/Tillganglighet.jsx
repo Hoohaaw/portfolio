@@ -59,9 +59,7 @@ function Tillganglighet() {
           de krav som ställs för tillgänglighet enligt WCAG.
         </p>
 
-        <div className={styles.imagePlaceholder}>
-          <span>Image: Färgpalettgenerator screenshot</span>
-        </div>
+        <img src="/images/accessibility_colours.avif" alt="Färgpalettgenerator screenshot" className={styles.caseImage} />
       </section>
 
       <section className={styles.section}>
