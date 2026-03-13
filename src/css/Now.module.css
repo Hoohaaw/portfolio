@@ -30,13 +30,14 @@
   opacity: 0.75;
 }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #646cff;
+.iconGroup {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   flex-shrink: 0;
-  margin-top: 8px;
+  font-size: 1.1em;
+  margin-top: 2px;
+  min-width: 52px;
 }
 
 @media (prefers-color-scheme: light) {
