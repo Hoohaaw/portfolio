@@ -19,9 +19,9 @@ function Card() {
         </div>
         <div className={styles.cvRow}>
           <span className={styles.cvLabel}>Download CV:</span>
-          <a href="./public/CVs/CV_Alex_Palm_SV.pdf" download className={styles.cvLink}>Svenska</a>
-          <a href="./public/CVs/CV_Alex_Palm_EN.pdf" download className={styles.cvLink}>English</a>
-          <a href="./public/CVs/CV_Alex_Palm_ES.pdf" download className={styles.cvLink}>Español</a>
+          <a href="/CVs/CV_Alex_Palm_SV.pdf" download className={styles.cvLink}>Svenska</a>
+          <a href="/CVs/CV_Alex_Palm_EN.pdf" download className={styles.cvLink}>English</a>
+          <a href="/CVs/CV_Alex_Palm_ES.pdf" download className={styles.cvLink}>Español</a>
         </div>
       </div>
       <div className={styles.heroImage}>

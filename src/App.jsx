@@ -16,6 +16,7 @@ import Tillganglighet from './pages/Tillganglighet.jsx';
 import UXWayOfWorking from './pages/UXWayOfWorking.jsx';
 import ClimateAPI from './pages/ClimateAPI.jsx';
 import PasswordValidator from './pages/PasswordValidator.jsx';
+import IdleGame from './pages/IdleGame.jsx';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function AnimatedRoutes() {
         <Route path="/projects/ux-way-of-working" element={<UXWayOfWorking />} />
         <Route path="/projects/climate-api" element={<ClimateAPI />} />
         <Route path="/projects/password-validator" element={<PasswordValidator />} />
+        <Route path="/projects/idle-game" element={<IdleGame />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
