@@ -86,6 +86,7 @@ function SelfServiceProductChange() {
           korten. Alla USP:ar visas ut oberoende av paket. Med hjälp av färg, ikoner samt
           funktionalitet visualiseras det innehåll som tillkommer eller tappas.
         </p>
+        <img src="/images/pc_2.avif" alt="Locked article — steg 1/4" className={styles.caseImage} />
         <p>
           Korten och USP:arna är även reaktiva. Eftersom möjligheten att byta paket endast
           tillkommer när man redan har en aktiv prenumeration kan det användas som en fördel för
@@ -110,8 +111,6 @@ function SelfServiceProductChange() {
           Efter ett lyckat byte laddas sidan om och artikeln är magiskt upplåst!
         </p>
 
-        <img src="/images/pc_2.avif" alt="Locked article — steg 1/4" className={styles.caseImage} />
-
         <div className={styles.slider}>
           <img src={slides[current].src} alt={slides[current].alt} className={styles.sliderImage} />
           <div className={styles.sliderControls}>
@@ -120,7 +119,7 @@ function SelfServiceProductChange() {
               onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
               aria-label="Previous"
             >&#8592;</button>
-            <span className={styles.sliderCounter}>{current + 2} / 4</span>
+            <span className={styles.sliderCounter}>{current + 1} / 3</span>
             <button
               className={styles.sliderBtn}
               onClick={() => setCurrent((current + 1) % slides.length)}
