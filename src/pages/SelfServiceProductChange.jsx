@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import styles from '../css/SelfServiceProductChange.module.css';
 
 const slides = [
@@ -118,13 +119,13 @@ function SelfServiceProductChange() {
               className={styles.sliderBtn}
               onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
               aria-label="Previous"
-            >&#8592;</button>
+            ><MdArrowBackIos /></button>
             <span className={styles.sliderCounter}>{current + 1} / 3</span>
             <button
               className={styles.sliderBtn}
               onClick={() => setCurrent((current + 1) % slides.length)}
               aria-label="Next"
-            >&#8594;</button>
+            ><MdArrowForwardIos /></button>
           </div>
         </div>
       </section>
