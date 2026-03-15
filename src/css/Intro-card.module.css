@@ -175,6 +175,8 @@
   object-position: center top;
   transform: scale(1.8) translateY(-40%);
   transform-origin: center top;
+  margin-right: 18px;   /* centering profil pic */
+  padding-right: 16px;  /* centering profil pic */
 }
 
 @media (max-width: 680px) {
