@@ -25,8 +25,8 @@ function Card() {
         </div>
       </div>
       <div className={styles.heroImage}>
-        <div className={styles.photoPlaceholder}>
-          <span>Photo</span>
+        <div className={styles.photoCircle}>
+          <img src="/images/ProfilePic.png" alt="Alex Palm" className={styles.profilePhoto} />
         </div>
       </div>
     </div>
