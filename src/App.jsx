@@ -5,6 +5,9 @@ import styles from './css/App.module.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import ScrollToTop from './ScrollToTop.jsx';
+import { CursorProvider } from './cursor/CursorContext.jsx';
+import CursorLayer from './cursor/CursorLayer.jsx';
+import CursorSelector from './cursor/CursorSelector.jsx';
 
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
@@ -41,12 +44,14 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <>
+    <CursorProvider>
       <ScrollToTop />
       <Header />
       <AnimatedRoutes />
       <Footer />
-    </>
+      <CursorLayer />
+      <CursorSelector />
+    </CursorProvider>
   );
 }
 

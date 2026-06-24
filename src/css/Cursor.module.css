@@ -1,0 +1,140 @@
+/* ---------- Custom cursor follower (glow / spotlight) ---------- */
+
+.follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+.glow {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, rgba(168, 180, 255, 0.95) 0%, rgba(100, 108, 255, 0.6) 45%, transparent 70%);
+  box-shadow: 0 0 14px 4px rgba(100, 108, 255, 0.55);
+  transition: width 0.18s var(--ease), height 0.18s var(--ease);
+}
+
+.spotlight {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(124, 131, 255, 0.16) 0%, rgba(124, 131, 255, 0.06) 35%, transparent 65%);
+}
+
+/* Pressed feedback (glow shrinks a touch) */
+.follower.down.glow {
+  width: 12px;
+  height: 12px;
+}
+
+/* ---------- Floating selector control ---------- */
+
+.selector {
+  position: fixed;
+  right: 20px;
+  bottom: 68px; /* sit above the fixed footer */
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  color: var(--text-strong);
+  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.toggle:hover {
+  transform: translateY(-2px) rotate(8deg);
+  border-color: var(--accent-soft);
+  box-shadow: var(--shadow-card), var(--glow-soft);
+}
+
+.menu {
+  width: 190px;
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  background: rgba(16, 16, 25, 0.85);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--shadow-deep);
+  animation: menuIn 0.18s var(--ease-out);
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.menuTitle {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-faint);
+  margin: 4px 8px 8px;
+  font-weight: 600;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.88em;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.option:hover {
+  background: var(--glass-bg-strong);
+  color: var(--text-strong);
+}
+
+.optionActive {
+  background: rgba(100, 108, 255, 0.16);
+  color: var(--text-strong);
+}
+
+.optionIcon {
+  font-size: 1.05em;
+  width: 20px;
+  text-align: center;
+}
+
+.check {
+  margin-left: auto;
+  color: var(--accent-soft);
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  .selector {
+    right: 14px;
+    bottom: 62px;
+  }
+}
