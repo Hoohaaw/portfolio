@@ -1,6 +1,8 @@
 #root {
-  max-width: 1280px;
+  max-width: var(--maxw);
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }

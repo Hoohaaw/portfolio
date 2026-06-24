@@ -1,53 +1,80 @@
-import { Link } from 'react-router-dom';
 import styles from '../css/project.module.css';
+import Reveal from '../components/Reveal.jsx';
+import ProjectCard from '../components/ProjectCard.jsx';
+
+const webProjects = [
+  {
+    to: '/projects/climate-api',
+    tag: 'GraphQL · MongoDB · Vercel',
+    title: 'Climate API',
+    desc: 'A GraphQL API serving historical temperature data across 17 countries, built with Apollo Server and MongoDB.',
+  },
+  {
+    to: '/projects/password-validator',
+    tag: 'JavaScript · Jest · NPM',
+    title: 'Password Validator',
+    desc: 'A JavaScript module validating passwords against 10 security rules. Tested with Jest and published on NPM.',
+  },
+  {
+    to: '/projects/idle-game',
+    tag: 'Node.js · Express · MongoDB',
+    title: 'Idle Game',
+    desc: 'A browser-based idle game built for short 5–10 minute sessions. Designed so the player can put it down and pick it back up.',
+  },
+];
+
+const uxProjects = [
+  {
+    to: '/projects/self-service-product-change',
+    tag: 'UX/UI Design',
+    title: 'Self-service — Product change',
+    desc: 'Giving subscribers the ability to change their subscription plan online, reducing calls to customer support.',
+  },
+  {
+    to: '/projects/tillganglighet',
+    tag: 'UX/UI Design',
+    title: 'Tillgänglighet',
+    desc: 'Improving accessibility across Gota Media’s products — WCAG compliance, colour contrast, and icon system overhaul.',
+  },
+  {
+    to: '/projects/ux-way-of-working',
+    tag: 'UX/UI Design',
+    title: 'UX — Way of working',
+    desc: 'Establishing team rituals like Bootcamp, Standup boards, a UX panel, and an internal testing channel.',
+  },
+];
 
 function Project() {
   return (
     <div className={styles.page}>
-      <div className={styles.intro}>
+      <Reveal className={styles.intro}>
         <h1>Projects</h1>
         <p>Projects from school, work, and personal exploration.</p>
-      </div>
+      </Reveal>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionLabel}>Web Development</h2>
+        <Reveal>
+          <h2 className={styles.sectionLabel}>Web Development</h2>
+        </Reveal>
         <div className={styles.grid}>
-          <Link to="/projects/climate-api" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagDev}`}>GraphQL · MongoDB · Vercel</span>
-            <h3 className={styles.cardTitle}>Climate API</h3>
-            <p className={styles.cardDesc}>A GraphQL API serving historical temperature data across 17 countries, built with Apollo Server and MongoDB.</p>
-          </Link>
-          <Link to="/projects/password-validator" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagDev}`}>JavaScript · Jest · NPM</span>
-            <h3 className={styles.cardTitle}>Password Validator</h3>
-            <p className={styles.cardDesc}>A JavaScript module validating passwords against 10 security rules. Tested with Jest and published on NPM.</p>
-          </Link>
-          <Link to="/projects/idle-game" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagDev}`}>Node.js · Express · MongoDB</span>
-            <h3 className={styles.cardTitle}>Idle Game</h3>
-            <p className={styles.cardDesc}>A browser-based idle game built for short 5–10 minute sessions. Designed so the player can put it down and pick it back up.</p>
-          </Link>
+          {webProjects.map((p, i) => (
+            <Reveal key={p.to} delay={i * 80}>
+              <ProjectCard {...p} variant="dev" index={String(i + 1).padStart(2, '0')} />
+            </Reveal>
+          ))}
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionLabel}>UX Design — Gota Media</h2>
+        <Reveal>
+          <h2 className={styles.sectionLabel}>UX Design — Gota Media</h2>
+        </Reveal>
         <div className={styles.grid}>
-          <Link to="/projects/self-service-product-change" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagUX}`}>UX/UI Design</span>
-            <h3 className={styles.cardTitle}>Self-service — Product change</h3>
-            <p className={styles.cardDesc}>Giving subscribers the ability to change their subscription plan online, reducing calls to customer support.</p>
-          </Link>
-          <Link to="/projects/tillganglighet" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagUX}`}>UX/UI Design</span>
-            <h3 className={styles.cardTitle}>Tillgänglighet</h3>
-            <p className={styles.cardDesc}>Improving accessibility across Gota Media's products — WCAG compliance, colour contrast, and icon system overhaul.</p>
-          </Link>
-          <Link to="/projects/ux-way-of-working" className={styles.card}>
-            <span className={`${styles.tag} ${styles.tagUX}`}>UX/UI Design</span>
-            <h3 className={styles.cardTitle}>UX — Way of working</h3>
-            <p className={styles.cardDesc}>Establishing team rituals like Bootcamp, Standup boards, a UX panel, and an internal testing channel.</p>
-          </Link>
+          {uxProjects.map((p, i) => (
+            <Reveal key={p.to} delay={i * 80}>
+              <ProjectCard {...p} variant="ux" index={String(i + 1).padStart(2, '0')} />
+            </Reveal>
+          ))}
         </div>
       </section>
     </div>

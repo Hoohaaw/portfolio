@@ -141,13 +141,3 @@
   opacity: 0.55;
 }
 
-@media (prefers-color-scheme: light) {
-  .divider {
-    border-top-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .imagePlaceholder {
-    border-color: rgba(0, 0, 0, 0.2);
-    color: rgba(0, 0, 0, 0.35);
-  }
-}

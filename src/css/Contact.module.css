@@ -19,7 +19,8 @@
   font-size: 2.8em;
   margin: 0 0 16px;
   line-height: 1.1;
-  background: linear-gradient(135deg, #ffffff 0%, #a8b4ff 100%);
+  letter-spacing: -0.02em;
+  background: var(--grad-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,18 +47,21 @@
   align-items: center;
   gap: 20px;
   padding: 22px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
-  background-color: rgba(255, 255, 255, 0.02);
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 
 .card:hover {
-  border-color: rgba(100, 108, 255, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(100, 108, 255, 0.1);
+  border-color: rgba(124, 131, 255, 0.45);
+  background: var(--glass-bg-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card), var(--glow-soft);
   color: inherit;
 }
 
@@ -65,14 +69,14 @@
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background-color: rgba(100, 108, 255, 0.12);
-  border: 1px solid rgba(100, 108, 255, 0.2);
+  background-color: rgba(100, 108, 255, 0.14);
+  border: 1px solid rgba(100, 108, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1em;
   font-weight: 700;
-  color: #a8b4ff;
+  color: var(--accent-soft);
   flex-shrink: 0;
 }
 
@@ -120,7 +124,7 @@
 /* Footer note */
 .note {
   padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--glass-border);
 }
 
 .note p {
@@ -142,28 +146,5 @@
   .cardIcon {
     width: 38px;
     height: 38px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .title {
-    background: linear-gradient(135deg, #1a1a2e 0%, #646cff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .card {
-    border-color: rgba(0, 0, 0, 0.08);
-    background-color: rgba(0, 0, 0, 0.01);
-  }
-
-  .card:hover {
-    border-color: rgba(100, 108, 255, 0.35);
-    box-shadow: 0 8px 32px rgba(100, 108, 255, 0.08);
-  }
-
-  .note {
-    border-top-color: rgba(0, 0, 0, 0.07);
   }
 }

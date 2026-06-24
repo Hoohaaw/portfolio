@@ -70,17 +70,3 @@
   border-radius: 4px;
 }
 
-@media (prefers-color-scheme: light) {
-  .techItem {
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .codeBlock {
-    background-color: rgba(0, 0, 0, 0.04);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .inlineCode {
-    background-color: rgba(0, 0, 0, 0.06);
-  }
-}

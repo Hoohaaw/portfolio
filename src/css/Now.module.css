@@ -1,48 +1,72 @@
 .section {
-  padding: 64px 0 80px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 72px 0 90px;
+  border-top: 1px solid var(--glass-border);
+  position: relative;
 }
 
 .label {
-  font-size: 0.75em;
+  display: inline-block;
+  font-size: 0.74em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.4;
-  font-weight: 500;
-  margin: 0 0 20px;
+  letter-spacing: 0.14em;
+  color: var(--accent-soft);
+  font-weight: 600;
+  margin: 0 0 26px;
+  padding-left: 26px;
+  position: relative;
+}
+
+.label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--grad-accent);
+  border-radius: 2px;
 }
 
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
 }
 
 .item {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  font-size: 0.97em;
-  line-height: 1.6;
-  opacity: 0.75;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: var(--text);
+  padding: 16px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  border-color: var(--glass-border-strong);
+  background: var(--glass-bg-strong);
+}
+
+.itemText {
+  flex: 1;
 }
 
 .iconGroup {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   flex-shrink: 0;
-  font-size: 1.1em;
-  margin-top: 2px;
-  min-width: 52px;
-}
-
-@media (prefers-color-scheme: light) {
-  .section {
-    border-top-color: rgba(0, 0, 0, 0.07);
-  }
+  font-size: 1.3em;
+  min-width: 44px;
 }

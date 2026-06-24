@@ -54,12 +54,3 @@
   color: #a8b4ff;
   border-color: rgba(100, 108, 255, 0.5);
 }
-
-@media (prefers-color-scheme: light) {
-  .code {
-    background: linear-gradient(135deg, #1a1a2e 0%, #646cff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}

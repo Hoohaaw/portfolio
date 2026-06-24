@@ -58,7 +58,7 @@
 
 .divider {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--glass-border);
   margin: 40px 0;
 }
 
@@ -183,8 +183,9 @@
   flex-direction: column;
   gap: 4px;
   padding: 16px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
   min-width: 120px;
 }
 
@@ -212,20 +213,5 @@
 
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .divider {
-    border-top-color: rgba(0, 0, 0, 0.08);
-  }
-
-  .photoPlaceholder {
-    border-color: rgba(0, 0, 0, 0.15);
-    color: rgba(0, 0, 0, 0.3);
-  }
-
-  .langItem {
-    border-color: rgba(0, 0, 0, 0.1);
   }
 }
