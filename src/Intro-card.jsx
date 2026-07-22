@@ -1,33 +1,20 @@
 import styles from './css/Intro-card.module.css';
 import { Link } from 'react-router-dom';
-import useSpotlight from './hooks/useSpotlight.js';
+import { useLanguage } from './i18n/languageStore.js';
 
 function Card() {
-  const { ref, onMouseMove, onMouseLeave } = useSpotlight();
+  const { t } = useLanguage();
 
   return (
-    <div
-      className={styles.hero}
-      ref={ref}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-    >
-      {/* Floating gradient orbs + cursor spotlight live in the background layer */}
-      <div className={styles.orbs} aria-hidden="true">
-        <span className={`${styles.orb} ${styles.orb1}`} />
-        <span className={`${styles.orb} ${styles.orb2}`} />
-        <span className={`${styles.orb} ${styles.orb3}`} />
-      </div>
-      <div className={styles.spotlight} aria-hidden="true" />
-
+    <div className={styles.hero}>
       <div className={styles.heroText}>
+        <p className={styles.tx}>TRANSMISSION 001</p>
+
         <p className={styles.greeting}>
-          <span className={styles.greetingDot} /> Available for work
+          <span className={styles.greetingDot} /> {t('hero.available')}
         </p>
         <h1 className={styles.name}>Alex Palm</h1>
-        <h2 className={styles.tagline}>
-          Fullstack Developer <span className={styles.amp}>&amp;</span> UX Designer
-        </h2>
+        <h2 className={styles.tagline}>Fullstack Developer &amp; UX Designer</h2>
         <p className={styles.bio}>
           Student at Linnéuniversitetet with a background in UX design.
           I build products that are both functional and well thought through —
@@ -35,23 +22,34 @@ function Card() {
         </p>
         <div className={styles.ctas}>
           <Link to="/projects" className={styles.ctaPrimary}>
-            View Projects <span className={styles.arrow}>→</span>
+            {t('hero.viewProjects')} <span className={styles.arrow}>→</span>
           </Link>
-          <Link to="/about" className={styles.ctaSecondary}>About Me</Link>
+          <Link to="/about" className={styles.ctaSecondary}>{t('hero.aboutMe')}</Link>
         </div>
         <div className={styles.cvRow}>
-          <span className={styles.cvLabel}>Download CV</span>
+          <span className={styles.cvLabel}>{t('hero.downloadCv')}</span>
           <a href="/CVs/Alex_Palm_CV_Svenska.pdf" download className={styles.cvLink}>Svenska</a>
           <a href="/CVs/Alex_Palm_CV_English.pdf" download className={styles.cvLink}>English</a>
           <a href="/CVs/Alex_Palm_CV_Espanol.pdf" download className={styles.cvLink}>Español</a>
         </div>
       </div>
 
-      <div className={styles.heroImage}>
-        <div className={styles.photoGlass}>
-          <div className={styles.photoCircle}>
-            <img src="/images/ProfilePic.png" alt="Alex Palm" className={styles.profilePhoto} />
+      <div className={styles.heroPanel}>
+        <figure className={styles.figure}>
+          <img src="/images/ProfilePic.png" alt="Alex Palm" className={styles.profilePhoto} />
+          <span className={`${styles.bracket} ${styles.bracketTl}`} aria-hidden="true" />
+          <span className={`${styles.bracket} ${styles.bracketTr}`} aria-hidden="true" />
+          <span className={`${styles.bracket} ${styles.bracketBl}`} aria-hidden="true" />
+          <span className={`${styles.bracket} ${styles.bracketBr}`} aria-hidden="true" />
+          <figcaption className={styles.figcaption}>CREW ID · A. PALM</figcaption>
+        </figure>
+
+        <div className={styles.gauge} role="img" aria-label="Decorative instrument dial reading approximately three quarters full">
+          <div className={styles.gaugeFace}>
+            <div className={styles.gaugeNeedle} />
+            <div className={styles.gaugeHub} />
           </div>
+          <p className={styles.gaugeLabel}>SYS · 01</p>
         </div>
       </div>
     </div>

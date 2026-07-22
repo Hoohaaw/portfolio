@@ -2,55 +2,57 @@
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  max-width: 640px;
+  margin: 0 auto;
   padding: 80px 24px;
-  animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+.tx {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: var(--color-accent-deep);
+  margin: 0 0 var(--space-sm);
 }
 
 .code {
-  font-size: 7em;
-  font-weight: 700;
-  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.2em);
+  font-weight: 400;
+  margin: 0 0 16px;
   line-height: 1;
-  background: linear-gradient(135deg, #ffffff 0%, #a8b4ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.3;
+  color: var(--color-accent);
 }
 
 .title {
   font-size: 1.8em;
   margin: 0 0 12px;
   font-weight: 600;
+  color: var(--color-ink);
 }
 
 .message {
   font-size: 0.97em;
-  opacity: 0.5;
+  color: var(--color-muted);
   margin: 0 0 36px;
   max-width: 340px;
   line-height: 1.7;
 }
 
 .home {
+  font-family: var(--font-mono);
   font-size: 0.9em;
-  color: rgba(168, 180, 255, 0.8);
+  color: var(--color-accent-deep);
   text-decoration: none;
   padding: 10px 22px;
-  border: 1px solid rgba(100, 108, 255, 0.25);
-  border-radius: 8px;
-  transition: color 0.2s, border-color 0.2s;
+  border: var(--rule-hair) solid var(--color-rule-2);
+  transition: color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
 }
 
 .home:hover {
-  color: #a8b4ff;
-  border-color: rgba(100, 108, 255, 0.5);
+  color: var(--color-ink);
+  border-color: var(--color-accent);
 }

@@ -1,30 +1,31 @@
-.section {
-  padding: 72px 0 90px;
-  border-top: 1px solid var(--glass-border);
-  position: relative;
+.now {
+  padding: 40px clamp(20px, 4vw, 40px);
+  margin-bottom: 40px;
+  background: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.group {
+  padding-top: 36px;
+  border-top: var(--rule-hair) solid var(--color-panel-border);
+}
+
+.group:first-child {
+  padding-top: 0;
+  border-top: none;
 }
 
 .label {
   display: inline-block;
+  font-family: var(--font-mono);
   font-size: 0.74em;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--accent-soft);
+  color: var(--color-accent-2-light);
   font-weight: 600;
-  margin: 0 0 26px;
-  padding-left: 26px;
-  position: relative;
-}
-
-.label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 18px;
-  height: 2px;
-  background: var(--grad-accent);
-  border-radius: 2px;
+  margin: 0 0 20px;
 }
 
 .list {
@@ -40,22 +41,19 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 0.95em;
+  font-family: var(--font-mono);
+  font-size: 0.92em;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--color-paper-3);
   padding: 16px 20px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+  border: var(--rule-hair) solid var(--color-panel-border);
+  background: transparent;
+  transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
 }
 
 .item:hover {
   transform: translateY(-3px);
-  border-color: var(--glass-border-strong);
-  background: var(--glass-bg-strong);
+  border-color: var(--color-accent);
 }
 
 .itemText {
@@ -69,4 +67,69 @@
   flex-shrink: 0;
   font-size: 1.3em;
   min-width: 44px;
+}
+
+/* Open-to-work status row — emphasised with an accent border + pulsing dot */
+.itemStatus {
+  border-color: var(--color-accent-2);
+  color: var(--color-paper);
+}
+
+.itemStatus:hover {
+  border-color: var(--color-accent-2-light);
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent-2);
+  box-shadow: 0 0 0 0 var(--color-accent-2-a55);
+  animation: statusPulse 2.4s ease-out infinite;
+}
+
+@keyframes statusPulse {
+  0% { box-shadow: 0 0 0 0 var(--color-accent-2-a55); }
+  70% { box-shadow: 0 0 0 7px var(--color-accent-2-a0); }
+  100% { box-shadow: 0 0 0 0 var(--color-accent-2-a0); }
+}
+
+/* Non-brand marker — instrument-panel square tick, replaces mismatched icon-library glyphs */
+.markerGlyph {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--color-muted);
+}
+
+/* Honest empty state — Certificates has none published yet */
+.empty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-style: italic;
+  color: var(--color-muted);
+  padding: 16px 20px;
+  border: 1px dashed var(--color-panel-border);
+  margin: 0;
+}
+
+.groupLink {
+  margin: 12px 0 0;
+}
+
+.groupLink a {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-accent-2-light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
+}
+
+.groupLink a:hover {
+  color: var(--color-paper);
+  border-color: var(--color-accent-2-light);
 }

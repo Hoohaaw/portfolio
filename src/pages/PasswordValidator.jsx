@@ -8,7 +8,7 @@ function PasswordValidator() {
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
 
       <div className={styles.hero}>
-        <h3 className={styles.tag}>Web Development</h3>
+        <p className={styles.tag}>Web Development</p>
         <h1 className={styles.title}>Password Validator</h1>
         <p className={pvStyles.intro}>
           A lightweight JavaScript module for validating passwords against common security rules.

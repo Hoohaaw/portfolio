@@ -3,12 +3,6 @@
   margin: 0 auto;
   padding: 80px 24px 100px;
   text-align: left;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .header {
@@ -16,20 +10,17 @@
 }
 
 .title {
-  font-size: 2.8em;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   margin: 0 0 16px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
 }
 
 .subtitle {
   font-size: 1.05em;
   line-height: 1.75;
-  opacity: 0.65;
+  color: var(--color-ink-2);
   margin: 0;
   max-width: 480px;
 }
@@ -47,36 +38,32 @@
   align-items: center;
   gap: 20px;
   padding: 22px 24px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
+  border: var(--rule-hair) solid var(--color-rule-2);
   text-decoration: none;
   color: inherit;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
+  background: var(--color-paper);
+  transition: border-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out);
 }
 
 .card:hover {
-  border-color: rgba(124, 131, 255, 0.45);
-  background: var(--glass-bg-strong);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card), var(--glow-soft);
+  border-color: var(--color-accent);
+  background: var(--color-paper-2);
+  transform: translateX(3px);
   color: inherit;
 }
 
 .cardIcon {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  background-color: rgba(100, 108, 255, 0.14);
-  border: 1px solid rgba(100, 108, 255, 0.25);
+  background-color: var(--color-paper-3);
+  border: var(--rule-hair) solid var(--color-rule-2);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-mono);
   font-size: 1em;
   font-weight: 700;
-  color: var(--accent-soft);
+  color: var(--color-accent-deep);
   flex-shrink: 0;
 }
 
@@ -89,16 +76,18 @@
 }
 
 .cardLabel {
-  font-size: 0.75em;
+  font-family: var(--font-mono);
+  font-size: 0.72em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.45;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
   font-weight: 500;
 }
 
 .cardValue {
   font-size: 0.98em;
   font-weight: 500;
+  color: var(--color-ink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -106,36 +95,39 @@
 
 .cardHint {
   font-size: 0.78em;
-  opacity: 0.4;
+  color: var(--color-muted);
 }
 
 .cardArrow {
+  font-family: var(--font-mono);
   font-size: 1.1em;
-  opacity: 0.3;
-  transition: opacity 0.2s, transform 0.2s;
+  color: var(--color-accent-deep);
+  opacity: 0.4;
+  transition: opacity var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out);
   flex-shrink: 0;
 }
 
 .card:hover .cardArrow {
-  opacity: 0.8;
+  opacity: 1;
   transform: translateX(3px);
 }
 
 /* Footer note */
 .note {
   padding-top: 32px;
-  border-top: 1px solid var(--glass-border);
+  border-top: var(--rule-hair) solid var(--color-rule-2);
 }
 
 .note p {
-  font-size: 0.85em;
-  opacity: 0.35;
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  color: var(--color-muted);
   margin: 0;
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 2.2em;
+    font-size: var(--text-xl);
   }
 
   .card {

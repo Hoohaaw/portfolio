@@ -8,11 +8,11 @@ function IdleGame() {
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
 
       <div className={styles.hero}>
-        <h3 className={styles.tag}>Web Development</h3>
+        <p className={styles.tag}>Web Development</p>
         <h1 className={styles.title}>Idle Game</h1>
         <p className={igStyles.intro}>
           A browser-based incremental game built for short 5–10 minute sessions.
-          The philosophy: open it, enjoy it, close it — progress continues even when you&apos;re away.
+          The philosophy: open it, enjoy it, close it — progress continues even when you’re away.
         </p>
         <a
           href="https://github.com/Hoohaaw/Idle-Game"
@@ -118,7 +118,7 @@ function IdleGame() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Development Status</h2>
         <p>
-          The project is not active at the moment. Hopefully the project will procced in the future. Core systems are operational — authentication,
+          The project is not active at the moment. Hopefully the project will proceed in the future. Core systems are operational — authentication,
           mission timers, and the main UI layouts are all working. Several systems are still
           being integrated:
         </p>

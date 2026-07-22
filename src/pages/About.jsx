@@ -8,7 +8,7 @@ function About() {
         <div className={styles.heroText}>
           <h1 className={styles.name}>Alex Palm</h1>
           <h2 className={styles.tagline}>Fullstack Developer & UX Designer</h2>
-          <p className={styles.location}>📍 Madrid, Spain / Kalmar, Sweden</p>
+          <p className={styles.location}><span className={styles.locationMark} aria-hidden="true" /> Based in Madrid, Spain · Swedish born</p>
         </div>
         <div className={styles.photoPlaceholder}><span>Photo</span></div>
       </div>
@@ -26,10 +26,10 @@ function About() {
         </p>
         <p>
           That curiosity led me to enroll in the Web Developer Program at Linnaeus University in
-          2024, where I'm building on my design foundation with fullstack development skills.
-          The combination of design thinking and technical ability is what I find most exciting
-          — being able to take an idea from concept to working product, with the user in mind
-          at every step.
+          2024, where I built on my design foundation with fullstack development skills. The
+          combination of design thinking and technical ability is what I find most exciting —
+          being able to take an idea from concept to working product, with the user in mind at
+          every step.
         </p>
         <p>
           Today I bring both perspectives to every project. I think about users when I write
@@ -101,7 +101,7 @@ function About() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>Summers 2023, 2024, 2025</span>
+              <span className={styles.timelineDate}>Summers 2023, 2024, 2025, 2026</span>
               <span className={styles.timelineCompany}>Electronic Arts — Madrid, Spain</span>
             </div>
             <div className={styles.timelineContent}>
@@ -151,7 +151,7 @@ function About() {
               <h3 className={styles.timelineRole}>Interaction Design Intern</h3>
               <p>
                 Developed user-centred interface solutions and digital prototypes in Sketch.
-                Produced illustrations in Adobe Illustrator used across Gota Media's premium
+                Produced illustrations in Adobe Illustrator used across Gota Media’s premium
                 news pages.
               </p>
             </div>
@@ -179,7 +179,7 @@ function About() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
-              <span className={styles.timelineDate}>2024 — 2026 (expected)</span>
+              <span className={styles.timelineDate}>2024 — 2026</span>
               <span className={styles.timelineCompany}>Linnaeus University (LNU) — Kalmar, Sweden</span>
             </div>
             <div className={styles.timelineContent}>
@@ -197,7 +197,7 @@ function About() {
               <span className={styles.timelineCompany}>Linnaeus University (LNU) — Kalmar, Sweden</span>
             </div>
             <div className={styles.timelineContent}>
-              <h3 className={styles.timelineRole}>Bachelor's Programme — Interaction Design</h3>
+              <h3 className={styles.timelineRole}>Bachelor’s Programme — Interaction Design</h3>
               <p>
                 UX research, user testing, digital prototyping, agile project methods, and
                 data-driven design.
@@ -232,8 +232,8 @@ function About() {
         </p>
         <p>
           I prefer working in cross-functional teams where design and engineering are in constant
-          dialogue. I'm drawn to problems where clarity of UX and quality of implementation both
-          matter — and I'm comfortable taking ownership of work from end to end, whether that
+          dialogue. I’m drawn to problems where clarity of UX and quality of implementation both
+          matter — and I’m comfortable taking ownership of work from end to end, whether that
           means running user research, designing in Figma, or shipping backend logic.
         </p>
       </section>
@@ -249,7 +249,7 @@ function About() {
           </div>
           <div className={styles.langItem}>
             <span className={styles.langName}>English</span>
-            <span className={styles.langLevel}>Fluent — C2</span>
+            <span className={styles.langLevel}>Fluent — C1</span>
           </div>
           <div className={styles.langItem}>
             <span className={styles.langName}>Spanish</span>

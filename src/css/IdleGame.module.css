@@ -3,20 +3,21 @@
   line-height: 1.75;
   margin-top: 16px;
   max-width: 720px;
-  opacity: 0.85;
+  color: var(--color-ink-2);
 }
 
 .repoLink {
   display: inline-block;
   margin-top: 12px;
+  font-family: var(--font-mono);
   font-size: 0.95em;
-  color: #646cff;
+  color: var(--color-accent-deep);
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .repoLink:hover {
-  opacity: 0.7;
+  color: var(--color-ink);
 }
 
 .featuresGrid {
@@ -31,18 +32,19 @@
   flex-direction: column;
   gap: 4px;
   padding: 14px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border: var(--rule-hair) solid var(--color-rule-2);
+  background: var(--color-paper-2);
 }
 
 .featureTitle {
   font-weight: 600;
   font-size: 0.9em;
+  color: var(--color-ink);
 }
 
 .featureDesc {
   font-size: 0.82em;
-  opacity: 0.55;
+  color: var(--color-muted);
   line-height: 1.4;
 }
 
@@ -58,18 +60,19 @@
   flex-direction: column;
   gap: 3px;
   padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border: var(--rule-hair) solid var(--color-rule-2);
+  background: var(--color-paper-2);
 }
 
 .techName {
   font-weight: 600;
   font-size: 0.9em;
+  color: var(--color-ink);
 }
 
 .techRole {
   font-size: 0.8em;
-  opacity: 0.5;
+  color: var(--color-muted);
 }
 
 .statusList {
@@ -80,7 +83,7 @@
 .statusList li {
   margin-bottom: 8px;
   line-height: 1.6;
-  opacity: 0.8;
+  color: var(--color-ink-2);
 }
 
 @media (max-width: 600px) {
@@ -89,4 +92,3 @@
     grid-template-columns: 1fr;
   }
 }
-

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CursorContext, CURSORS, STORAGE_KEY } from './cursorStore.js';
+import { CursorContext, CURSORS, STORAGE_KEY, INTERACTIVE_SELECTOR } from './cursorStore.js';
 
 /** Holds the selected cursor, persists it, and applies native cursors to <body>. */
 export function CursorProvider({ children }) {
@@ -27,6 +27,37 @@ export function CursorProvider({ children }) {
       def?.kind === 'follower' ? 'none' : def?.css ?? 'auto';
     return () => {
       document.body.style.cursor = 'auto';
+    };
+  }, [cursor]);
+
+  // Swap in a themed hover cursor while over clickable elements. Applied
+  // directly on the hovered element (inline style beats any authored
+  // `cursor: pointer` rule) and cleared once the pointer leaves it.
+  useEffect(() => {
+    const def = CURSORS.find((c) => c.id === cursor);
+    if (def?.kind !== 'native' || !def.hoverCss) return;
+
+    let active = null;
+    const onOver = (e) => {
+      const el = e.target?.closest?.(INTERACTIVE_SELECTOR);
+      if (el) {
+        active = el;
+        el.style.cursor = def.hoverCss;
+      }
+    };
+    const onOut = (e) => {
+      if (active && (!e.relatedTarget || !active.contains(e.relatedTarget))) {
+        active.style.cursor = '';
+        active = null;
+      }
+    };
+
+    window.addEventListener('pointerover', onOver);
+    window.addEventListener('pointerout', onOut);
+    return () => {
+      window.removeEventListener('pointerover', onOver);
+      window.removeEventListener('pointerout', onOut);
+      if (active) active.style.cursor = '';
     };
   }, [cursor]);
 

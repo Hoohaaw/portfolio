@@ -1,5 +1,5 @@
 .pageTransition {
-  animation: pageFadeIn 0.3s var(--ease-out);
+  animation: pageFadeIn var(--dur-long) var(--ease-out);
 }
 
 @keyframes pageFadeIn {

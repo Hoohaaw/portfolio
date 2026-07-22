@@ -9,7 +9,7 @@ import confetti from 'canvas-confetti';
  *   fireworks();             // a few seconds of fireworks
  */
 
-const COLORS = ['#646cff', '#a8b4ff', '#c084fc', '#22d3ee', '#ffffff'];
+const COLORS = ['#C25A2A', '#6FBF73', '#F2EDE1', '#5A4632', '#E8DCC6'];
 
 function motionOK() {
   return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;

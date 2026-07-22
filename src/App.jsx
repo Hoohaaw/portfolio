@@ -8,11 +8,14 @@ import ScrollToTop from './ScrollToTop.jsx';
 import { CursorProvider } from './cursor/CursorContext.jsx';
 import CursorLayer from './cursor/CursorLayer.jsx';
 import CursorSelector from './cursor/CursorSelector.jsx';
+import { LanguageProvider } from './i18n/LanguageContext.jsx';
+import { useLanguage } from './i18n/languageStore.js';
 
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Contact from './pages/Contact.jsx';
+import Certificates from './pages/Certificates.jsx';
 import NotFound from './pages/NotFound.jsx';
 import SelfServiceProductChange from './pages/SelfServiceProductChange.jsx';
 import Tillganglighet from './pages/Tillganglighet.jsx';
@@ -21,15 +24,21 @@ import ClimateAPI from './pages/ClimateAPI.jsx';
 import PasswordValidator from './pages/PasswordValidator.jsx';
 import IdleGame from './pages/IdleGame.jsx';
 
+function SkipLink() {
+  const { t } = useLanguage();
+  return <a href="#main" className="skip-link">{t('skip.toContent')}</a>;
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <main key={location.pathname} className={styles.pageTransition}>
+    <main id="main" key={location.pathname} className={styles.pageTransition}>
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/certificates" element={<Certificates />} />
         <Route path="/projects/self-service-product-change" element={<SelfServiceProductChange />} />
         <Route path="/projects/tillganglighet" element={<Tillganglighet />} />
         <Route path="/projects/ux-way-of-working" element={<UXWayOfWorking />} />
@@ -44,14 +53,17 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <CursorProvider>
-      <ScrollToTop />
-      <Header />
-      <AnimatedRoutes />
-      <Footer />
-      <CursorLayer />
-      <CursorSelector />
-    </CursorProvider>
+    <LanguageProvider>
+      <CursorProvider>
+        <ScrollToTop />
+        <SkipLink />
+        <Header />
+        <AnimatedRoutes />
+        <Footer />
+        <CursorLayer />
+        <CursorSelector />
+      </CursorProvider>
+    </LanguageProvider>
   );
 }
 

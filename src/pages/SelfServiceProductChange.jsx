@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
-import styles from '../css/SelfServiceProductChange.module.css';
+import styles from '../css/CaseStudy.module.css';
+import sliderStyles from '../css/SelfServiceProductChange.module.css';
 
 const slides = [
   { src: '/images/pc_3.avif', alt: 'Locked article — steg 1/3' },
@@ -17,7 +18,7 @@ function SelfServiceProductChange() {
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
 
       <div className={styles.hero}>
-        <h3 className={styles.tag}>UX/UI Design</h3>
+        <p className={styles.tag}>UX/UI Design</p>
         <h1 className={styles.title}>Self-service - Product change</h1>
       </div>
 
@@ -112,17 +113,17 @@ function SelfServiceProductChange() {
           Efter ett lyckat byte laddas sidan om och artikeln är magiskt upplåst!
         </p>
 
-        <div className={styles.slider}>
-          <img src={slides[current].src} alt={slides[current].alt} className={styles.sliderImage} />
-          <div className={styles.sliderControls}>
+        <div className={sliderStyles.slider}>
+          <img src={slides[current].src} alt={slides[current].alt} className={sliderStyles.sliderImage} />
+          <div className={sliderStyles.sliderControls}>
             <button
-              className={styles.sliderBtn}
+              className={sliderStyles.sliderBtn}
               onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
               aria-label="Previous"
             ><MdArrowBackIos /></button>
-            <span className={styles.sliderCounter}>{current + 1} / 3</span>
+            <span className={sliderStyles.sliderCounter}>{current + 1} / 3</span>
             <button
-              className={styles.sliderBtn}
+              className={sliderStyles.sliderBtn}
               onClick={() => setCurrent((current + 1) % slides.length)}
               aria-label="Next"
             ><MdArrowForwardIos /></button>

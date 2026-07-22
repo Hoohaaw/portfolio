@@ -3,29 +3,22 @@
   margin: 0 auto;
   padding: 60px 24px 100px;
   text-align: left;
-  animation: fadeIn 0.3s ease;
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.88em;
-  opacity: 0.55;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-accent-deep);
   text-decoration: none;
-  color: inherit;
   margin-bottom: 40px;
-  transition: opacity 0.2s;
+  transition: color var(--dur-short) var(--ease-out);
 }
 
 .backLink:hover {
-  opacity: 1;
-  color: inherit;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  color: var(--color-ink);
 }
 
 .hero {
@@ -34,21 +27,23 @@
 
 .tag {
   display: inline-block;
-  font-size: 0.9em;
-  font-style: italic;
-  font-weight: normal;
-  padding: 4px 14px;
-  border: 1px solid #ccc;
-  border-radius: 9999px;
-  background-color: rgb(204, 85, 5);
-  color: white;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4px 12px;
+  border: var(--rule-hair) solid var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-accent-ink);
   margin-bottom: 16px;
 }
 
 .title {
-  font-size: 2.8em;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   margin: 0;
-  line-height: 1.1;
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
 }
 
 .section {
@@ -56,11 +51,13 @@
 }
 
 .sectionTitle {
-  font-size: 1.2em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.5;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-deep);
   margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .section p {
@@ -69,30 +66,31 @@
   margin-top: 0;
   margin-bottom: 16px;
   max-width: 720px;
+  color: var(--color-ink-2);
 }
 
 .divider {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: var(--rule-hair) solid var(--color-rule-2);
   margin: 40px 0;
 }
 
 .imagePlaceholder {
   width: 100%;
   min-height: 280px;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border: 2px dashed var(--color-rule-2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--color-muted);
+  font-family: var(--font-mono);
   font-size: 0.9em;
   margin: 24px 0;
 }
 
 .caseImage {
   width: 100%;
-  border-radius: 12px;
+  border: var(--rule-hair) solid var(--color-rule-2);
   margin: 24px 0;
   display: block;
 }
@@ -103,6 +101,6 @@
   }
 
   .title {
-    font-size: 2em;
+    font-size: var(--text-xl);
   }
 }

@@ -7,7 +7,7 @@ function Tillganglighet() {
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
 
       <div className={styles.hero}>
-        <h3 className={styles.tag}>UX/UI Design</h3>
+        <p className={styles.tag}>UX/UI Design</p>
         <h1 className={styles.title}>Tillgänglighet</h1>
       </div>
 

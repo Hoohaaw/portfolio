@@ -1,0 +1,39 @@
+.switch {
+  display: inline-flex;
+  border: var(--rule-hair) solid var(--color-panel-border);
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+}
+
+.option {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  color: var(--color-paper-3);
+  cursor: pointer;
+  transition: color var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out);
+}
+
+.option + .option {
+  border-left: var(--rule-hair) solid var(--color-panel-border);
+}
+
+.option:hover {
+  color: var(--color-paper);
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+.active {
+  color: var(--color-accent-light);
+  background-color: var(--color-accent-a14);
+}
+
+.active:hover {
+  color: var(--color-accent-light);
+}

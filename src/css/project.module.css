@@ -11,16 +11,11 @@
 
 .intro h1 {
   margin-bottom: 10px;
-  font-size: 3em;
-  letter-spacing: -0.02em;
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: var(--text-2xl);
 }
 
 .intro p {
-  color: var(--text-muted);
+  color: var(--color-ink-2);
   font-size: 1.08em;
   margin: 0;
 }
@@ -30,25 +25,13 @@
 }
 
 .sectionLabel {
+  font-family: var(--font-mono);
   font-size: 0.78em;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--accent-soft);
+  letter-spacing: 0.12em;
+  color: var(--color-accent-deep);
   margin-bottom: 22px;
   font-weight: 600;
-  padding-left: 26px;
-  position: relative;
-}
-
-.sectionLabel::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 18px;
-  height: 2px;
-  background: var(--grad-accent);
-  border-radius: 2px;
 }
 
 .grid {
@@ -69,50 +52,28 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 26px;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
+  border: var(--rule-hair) solid var(--color-rule-2);
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  overflow: hidden;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-}
-
-/* Cursor-following spotlight glow (vars from useSpotlight) */
-.cardGlow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  background: radial-gradient(
-    300px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(124, 131, 255, 0.16),
-    transparent 70%
-  );
-  transition: opacity var(--dur) var(--ease);
+  background: var(--color-paper);
+  transition: border-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out);
 }
 
 .card:hover {
-  border-color: rgba(124, 131, 255, 0.45);
+  border-color: var(--color-accent);
+  background: var(--color-paper-2);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card), var(--glow-soft);
   color: inherit;
-}
-
-.card:hover .cardGlow {
-  opacity: 1;
 }
 
 .cardIndex {
   position: absolute;
   top: 18px;
   right: 22px;
+  font-family: var(--font-mono);
   font-size: 0.8em;
-  font-weight: 600;
-  color: var(--text-faint);
+  color: var(--color-rule-2);
   letter-spacing: 0.05em;
   font-variant-numeric: tabular-nums;
 }
@@ -120,39 +81,41 @@
 .tag {
   position: relative;
   display: inline-block;
-  font-size: 0.74em;
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  padding: 4px 10px;
   margin-bottom: 14px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02em;
+  border: var(--rule-hair) solid;
 }
 
 .tagDev {
-  background-color: rgba(100, 108, 255, 0.16);
-  color: var(--accent-soft);
-  border: 1px solid rgba(100, 108, 255, 0.25);
+  background-color: var(--color-accent-a10);
+  color: var(--color-accent-deep);
+  border-color: var(--color-accent-a30);
 }
 
 .tagUX {
-  background-color: rgba(255, 138, 96, 0.14);
-  color: #ffb591;
-  border: 1px solid rgba(255, 138, 96, 0.25);
+  background-color: var(--color-accent-2-a10);
+  color: var(--color-accent-2-deep);
+  border-color: var(--color-accent-2-a30);
 }
 
 .cardTitle {
   position: relative;
-  font-size: 1.22em;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1.15em;
+  font-weight: 400;
   margin: 0 0 10px;
-  color: var(--text-strong);
+  color: var(--color-ink);
 }
 
 .cardDesc {
   position: relative;
   font-size: 0.9em;
   line-height: 1.65;
-  color: var(--text-muted);
+  color: var(--color-ink-2);
   margin: 0;
   flex: 1;
 }
@@ -160,11 +123,12 @@
 .cardArrow {
   position: relative;
   margin-top: 18px;
+  font-family: var(--font-mono);
   font-size: 1.1em;
-  color: var(--accent-soft);
+  color: var(--color-accent-deep);
   opacity: 0;
   transform: translateX(-6px);
-  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: opacity var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out);
 }
 
 .card:hover .cardArrow {
@@ -179,19 +143,18 @@
 
 .cardMuted:hover {
   transform: none;
-  border-color: var(--glass-border);
-  box-shadow: none;
+  border-color: var(--color-rule-2);
 }
 
 .externalHint {
   margin-top: 16px;
   font-size: 0.82em;
-  color: var(--text-muted);
+  color: var(--color-ink-2);
 }
 
 .comingSoon {
   margin-top: 16px;
   font-size: 0.82em;
-  color: var(--text-muted);
+  color: var(--color-ink-2);
   font-style: italic;
 }

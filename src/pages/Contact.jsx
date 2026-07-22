@@ -7,7 +7,7 @@ function Contact() {
       <div className={styles.header}>
         <h1 className={styles.title}>Get in touch</h1>
         <p className={styles.subtitle}>
-          I&apos;m open to new opportunities, collaborations, and conversations.
+          I’m open to new opportunities, collaborations, and conversations.
           The best way to reach me is by email or LinkedIn.
         </p>
       </div>
@@ -15,7 +15,7 @@ function Contact() {
       <div className={styles.cards}>
 
         <a href="mailto:Alex.cj.palm@proton.me" className={styles.card}>
-          <div className={styles.cardIcon}>✉</div>
+          <div className={styles.cardIcon}>@</div>
           <div className={styles.cardContent}>
             <span className={styles.cardLabel}>Email</span>
             <span className={styles.cardValue}>Alex.cj.palm@proton.me</span>
@@ -25,7 +25,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/alex-palm-0b70091b6/"
+          href="https://www.linkedin.com/in/alex-carl-johan-palm/"
           target="_blank"
           rel="noreferrer"
           className={styles.card}
@@ -45,7 +45,7 @@ function Contact() {
           rel="noreferrer"
           className={styles.card}
         >
-          <div className={styles.cardIcon}>⌥</div>
+          <div className={styles.cardIcon}>gh</div>
           <div className={styles.cardContent}>
             <span className={styles.cardLabel}>GitHub</span>
             <span className={styles.cardValue}>github.com/Hoohaaw</span>
@@ -57,7 +57,7 @@ function Contact() {
       </div>
 
       <div className={styles.note}>
-        <p>Based in Sweden · Available for remote work</p>
+        <p>Based in Madrid, Spain · Swedish born · Available for remote work</p>
       </div>
 
     </div>

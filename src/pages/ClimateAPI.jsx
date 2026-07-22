@@ -8,7 +8,7 @@ function ClimateAPI() {
       <Link to="/projects" className={styles.backLink}>← Back to Projects</Link>
 
       <div className={styles.hero}>
-        <h3 className={styles.tag}>Web Development</h3>
+        <p className={styles.tag}>Web Development</p>
         <h1 className={styles.title}>Climate API</h1>
         <p className={apiStyles.intro}>
           A GraphQL API serving historical temperature data across 17 countries, their cities,
@@ -110,19 +110,19 @@ function ClimateAPI() {
         <p>
           Choosing GraphQL meant a single <code className={apiStyles.inlineCode}>/graphql</code> endpoint
           handles all queries and mutations. Compared to REST, this eliminates over-fetching —
-          a client querying only country names does not receive city or reading data it doesn't need.
+          a client querying only country names does not receive city or reading data it doesn’t need.
           The strongly typed schema also acts as built-in documentation.
         </p>
         <h3 className={apiStyles.subHeading}>Nested queries</h3>
         <p>
           The schema is designed so that relationships between countries, cities, and readings can
-          be resolved in a single query. This is one of GraphQL's key advantages over REST, where
+          be resolved in a single query. This is one of GraphQL’s key advantages over REST, where
           the same data would typically require multiple round trips.
         </p>
         <h3 className={apiStyles.subHeading}>JWT Authentication</h3>
         <p>
           Write operations (creating, updating, and deleting temperature readings) are protected
-          with JWT. Read queries are publicly accessible, which fits the dataset's nature as
+          with JWT. Read queries are publicly accessible, which fits the dataset’s nature as
           reference data.
         </p>
         <h3 className={apiStyles.subHeading}>Handling a large dataset</h3>

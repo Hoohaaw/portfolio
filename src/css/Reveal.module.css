@@ -2,8 +2,8 @@
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity var(--dur-slow) var(--ease-out),
-    transform var(--dur-slow) var(--ease-out);
+    opacity var(--dur-long) var(--ease-out),
+    transform var(--dur-long) var(--ease-out);
   will-change: opacity, transform;
 }
 
