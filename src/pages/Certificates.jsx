@@ -4,6 +4,8 @@ import { useLanguage } from '../i18n/languageStore.js';
 import styles from '../css/CaseStudy.module.css';
 import certStyles from '../css/Certificates.module.css';
 
+const GENAI_CERT_URL = encodeURI('/certificates/CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.pdf');
+
 function Certificates() {
   const { t } = useLanguage();
 
@@ -18,10 +20,18 @@ function Certificates() {
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>{t('certPage.earned')}</h2>
-        <p className={certStyles.empty}>
-          <PiCertificateBold aria-hidden="true" />
-          {t('now.certEmpty')}
-        </p>
+        <ul className={certStyles.list}>
+          <li className={certStyles.item}>
+            <span className={certStyles.iconGroup}>
+              <PiCertificateBold color="#f5a623" />
+            </span>
+            <span className={certStyles.itemText}>
+              <a href={GENAI_CERT_URL} target="_blank" rel="noreferrer">
+                {t('now.certGenAI')}
+              </a>
+            </span>
+          </li>
+        </ul>
       </section>
 
       <hr className={styles.divider} />

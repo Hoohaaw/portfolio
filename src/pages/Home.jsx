@@ -7,6 +7,9 @@ import {
   SiGraphql, SiNodedotjs, SiMongodb, SiTypescript, SiReact, SiElixir,
   SiTailwindcss, SiSupabase, SiObsidian, SiFlutter,
 } from 'react-icons/si';
+import { PiCertificateBold } from 'react-icons/pi';
+
+const GENAI_CERT_URL = encodeURI('/certificates/CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.pdf');
 
 function Home() {
   const { t } = useLanguage();
@@ -48,7 +51,12 @@ function Home() {
     {
       id: 'certificates',
       label: t('now.certificates'),
-      items: [],
+      items: [
+        {
+          icons: [<PiCertificateBold key="c" color="#f5a623" />],
+          text: <a href={GENAI_CERT_URL} target="_blank" rel="noreferrer">{t('now.certGenAI')}</a>,
+        },
+      ],
       link: { to: '/certificates', text: t('now.certLink') },
     },
     {

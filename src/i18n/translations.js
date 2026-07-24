@@ -40,6 +40,7 @@ export const translations = {
     'now.projectSync': 'Building a sync tool between Obsidian, Flutter & a custom dashboard — starting with a shared to-do list',
     'now.certEmpty': 'Nothing published yet — coming soon.',
     'now.certLink': 'View certificates',
+    'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',
 
     'certPage.tag': 'Credentials',
     'certPage.earned': 'Earned',
@@ -82,6 +83,7 @@ export const translations = {
     'now.projectSync': 'Bygger ett synkverktyg mellan Obsidian, Flutter & en egen dashboard — börjar med en delad att-göra-lista',
     'now.certEmpty': 'Inget publicerat än — kommer snart.',
     'now.certLink': 'Visa certifikat',
+    'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',
 
     'certPage.tag': 'Meriter',
     'certPage.earned': 'Uppnådda',

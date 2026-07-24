@@ -60,6 +60,18 @@
   flex: 1;
 }
 
+.itemText a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-panel-border);
+  transition: border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
+}
+
+.itemText a:hover {
+  color: var(--color-paper);
+  border-color: var(--color-accent-2-light);
+}
+
 .iconGroup {
   display: flex;
   align-items: center;
