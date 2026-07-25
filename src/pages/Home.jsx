@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Card from '../Intro-card.jsx';
 import Reveal from '../components/Reveal.jsx';
+import ContactForm from '../components/ContactForm.jsx';
 import styles from '../css/Now.module.css';
 import { useLanguage } from '../i18n/languageStore.js';
 import {
@@ -108,6 +109,8 @@ function Home() {
           </div>
         ))}
       </section>
+
+      <ContactForm />
     </>
   );
 }

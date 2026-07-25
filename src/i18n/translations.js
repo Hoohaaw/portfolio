@@ -47,6 +47,16 @@ export const translations = {
     'certPage.inProgress': 'In progress',
     'certPage.backHome': '← Back to home',
 
+    'contactForm.label': 'Get in touch',
+    'contactForm.name': 'Name',
+    'contactForm.company': 'Company (optional)',
+    'contactForm.email': 'Email',
+    'contactForm.subject': 'Subject',
+    'contactForm.message': 'Message',
+    'contactForm.send': 'Send message',
+    'contactForm.sending': 'Sending…',
+    'contactForm.success': 'Thanks — your message is on its way. I\'ll get back to you soon.',
+
     'lang.switchTo': 'Byt till svenska',
   },
   sv: {
@@ -89,6 +99,16 @@ export const translations = {
     'certPage.earned': 'Uppnådda',
     'certPage.inProgress': 'Pågående',
     'certPage.backHome': '← Tillbaka till startsidan',
+
+    'contactForm.label': 'Kom i kontakt',
+    'contactForm.name': 'Namn',
+    'contactForm.company': 'Företag (valfritt)',
+    'contactForm.email': 'E-post',
+    'contactForm.subject': 'Ämne',
+    'contactForm.message': 'Meddelande',
+    'contactForm.send': 'Skicka meddelande',
+    'contactForm.sending': 'Skickar…',
+    'contactForm.success': 'Tack — ditt meddelande är på väg. Jag återkommer snart.',
 
     'lang.switchTo': 'Switch to English',
   },

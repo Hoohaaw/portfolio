@@ -1,0 +1,121 @@
+.contact {
+  padding: 40px clamp(20px, 4vw, 40px) 44px;
+  margin-bottom: 40px;
+  background: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.74em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-2-light);
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-paper-3);
+}
+
+.input,
+.textarea {
+  font-family: var(--font-body);
+  font-size: 0.95em;
+  color: var(--color-paper);
+  background: transparent;
+  border: var(--rule-hair) solid var(--color-panel-border);
+  padding: 12px 14px;
+  transition: border-color var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-body);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: oklch(22% 0.03 50 / 40%);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-muted);
+}
+
+.submit {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-accent-ink);
+  background: var(--color-accent);
+  border: none;
+  padding: 13px 28px;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out);
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-accent-deep);
+  transform: translateY(-2px);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: oklch(70% 0.19 30);
+  margin: 0;
+}
+
+.success {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  color: var(--color-accent-2-light);
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
