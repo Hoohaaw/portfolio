@@ -44,6 +44,15 @@ const uxProjects = [
   },
 ];
 
+const locProjects = [
+  {
+    to: '/projects/localization-qa',
+    tag: 'Localization QA',
+    title: 'Localization Testing — EA SPORTS FC',
+    desc: 'Seasonal QA work on EA SPORTS FC — testing localized text and UI strings across languages, logging and verifying bugs each summer.',
+  },
+];
+
 function Project() {
   return (
     <div className={styles.page}>
@@ -73,6 +82,19 @@ function Project() {
           {uxProjects.map((p, i) => (
             <Reveal key={p.to} delay={i * 80}>
               <ProjectCard {...p} variant="ux" index={String(i + 1).padStart(2, '0')} />
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Reveal>
+          <h2 className={styles.sectionLabel}>Localization — Electronic Arts</h2>
+        </Reveal>
+        <div className={styles.grid}>
+          {locProjects.map((p, i) => (
+            <Reveal key={p.to} delay={i * 80}>
+              <ProjectCard {...p} variant="loc" index={String(i + 1).padStart(2, '0')} />
             </Reveal>
           ))}
         </div>

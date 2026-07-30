@@ -102,6 +102,12 @@
   border-color: var(--color-accent-2-a30);
 }
 
+.tagLoc {
+  background-color: var(--color-accent-3-a10);
+  color: var(--color-accent-3-deep);
+  border-color: var(--color-accent-3-a30);
+}
+
 .cardTitle {
   position: relative;
   font-family: var(--font-display);
