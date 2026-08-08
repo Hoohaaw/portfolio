@@ -33,16 +33,21 @@ export function CursorProvider({ children }) {
   // Swap in a themed hover cursor while over clickable elements. Applied
   // directly on the hovered element (inline style beats any authored
   // `cursor: pointer` rule) and cleared once the pointer leaves it.
+  // Follower cursors (radar/blip) get `none` here too, since their own
+  // `cursor: pointer` rules would otherwise show the system hand on top
+  // of the custom follower.
   useEffect(() => {
     const def = CURSORS.find((c) => c.id === cursor);
-    if (def?.kind !== 'native' || !def.hoverCss) return;
+    const overrideCss =
+      def?.kind === 'follower' ? 'none' : def?.kind === 'native' ? def.hoverCss : null;
+    if (!overrideCss) return;
 
     let active = null;
     const onOver = (e) => {
       const el = e.target?.closest?.(INTERACTIVE_SELECTOR);
       if (el) {
         active = el;
-        el.style.cursor = def.hoverCss;
+        el.style.cursor = overrideCss;
       }
     };
     const onOut = (e) => {
