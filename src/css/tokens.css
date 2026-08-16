@@ -34,6 +34,11 @@
   --color-accent-2-deep:  oklch(36% 0.1 150);  /* text-safe on light paper */
   --color-accent-2-light: oklch(76% 0.12 150); /* text-safe on dark ink */
 
+  /* Tertiary accent — blue/violet, for localization tag and related content */
+  --color-accent-3:       oklch(58% 0.14 260);
+  --color-accent-3-deep:  oklch(38% 0.11 260);  /* text-safe on light paper */
+  --color-accent-3-light: oklch(76% 0.12 260); /* text-safe on dark ink */
+
   /* Accent alpha steps — named so no file inlines oklch(... / x%) by hand */
   --color-accent-a10:    oklch(60% 0.17 42 / 10%);
   --color-accent-a14:    oklch(60% 0.17 42 / 14%);
@@ -43,6 +48,8 @@
   --color-accent-2-a30:  oklch(58% 0.13 150 / 30%);
   --color-accent-2-a55:  oklch(58% 0.13 150 / 55%);  /* pulse-ring start */
   --color-accent-2-a0:   oklch(58% 0.13 150 / 0%);   /* pulse-ring end */
+  --color-accent-3-a10:  oklch(58% 0.14 260 / 10%);
+  --color-accent-3-a30:  oklch(58% 0.14 260 / 30%);
 
   /* Decorative overlays — dot-grid radar / scanline, low alpha */
   --color-grid-dot:  oklch(45% 0.03 55 / 14%);
