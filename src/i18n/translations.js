@@ -41,6 +41,11 @@ export const translations = {
     'now.certEmpty': 'Nothing published yet — coming soon.',
     'now.certLink': 'View certificates',
     'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',
+    'now.certClaude101': 'Claude 101 — Anthropic',
+    'now.certClaudeCode101': 'Claude Code 101 — Anthropic',
+    'now.certClaudePlatform101': 'Claude Platform 101 — Anthropic',
+    'now.certIntroMcp': 'Introduction to Model Context Protocol — Anthropic',
+    'now.certAiFluencyStudents': 'AI Fluency for Students — Anthropic',
 
     'certPage.tag': 'Credentials',
     'certPage.earned': 'Earned',
@@ -94,6 +99,11 @@ export const translations = {
     'now.certEmpty': 'Inget publicerat än — kommer snart.',
     'now.certLink': 'Visa certifikat',
     'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',
+    'now.certClaude101': 'Claude 101 — Anthropic',
+    'now.certClaudeCode101': 'Claude Code 101 — Anthropic',
+    'now.certClaudePlatform101': 'Claude Platform 101 — Anthropic',
+    'now.certIntroMcp': 'Introduction to Model Context Protocol — Anthropic',
+    'now.certAiFluencyStudents': 'AI Fluency for Students — Anthropic',
 
     'certPage.tag': 'Meriter',
     'certPage.earned': 'Uppnådda',

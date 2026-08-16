@@ -4,6 +4,12 @@ import ProjectCard from '../components/ProjectCard.jsx';
 
 const webProjects = [
   {
+    to: '/projects/party-with-me',
+    tag: 'React · Supabase · TS · Tailwind',
+    title: 'Party With Me',
+    desc: 'Placeholder — description coming soon.',
+  },
+  {
     to: '/projects/climate-api',
     tag: 'GraphQL · MongoDB · Vercel',
     title: 'Climate API',
@@ -20,6 +26,15 @@ const webProjects = [
     tag: 'Node.js · Express · MongoDB',
     title: 'Idle Game',
     desc: 'A browser-based idle game built for short 5–10 minute sessions. Designed so the player can put it down and pick it back up.',
+  },
+];
+
+const agenticProjects = [
+  {
+    to: '/projects/idle-game-agentic',
+    tag: 'Agentic Coding',
+    title: 'Idle Game — Agentic Rebuild',
+    desc: 'Rebuilding the Idle Game with agentic coding — React, TypeScript, Tailwind & Supabase.',
   },
 ];
 
@@ -67,6 +82,19 @@ function Project() {
         </Reveal>
         <div className={styles.grid}>
           {webProjects.map((p, i) => (
+            <Reveal key={p.to} delay={i * 80}>
+              <ProjectCard {...p} variant="dev" index={String(i + 1).padStart(2, '0')} />
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Reveal>
+          <h2 className={styles.sectionLabel}>Agentic Coding</h2>
+        </Reveal>
+        <div className={styles.grid}>
+          {agenticProjects.map((p, i) => (
             <Reveal key={p.to} delay={i * 80}>
               <ProjectCard {...p} variant="dev" index={String(i + 1).padStart(2, '0')} />
             </Reveal>

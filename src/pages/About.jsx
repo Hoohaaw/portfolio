@@ -101,6 +101,21 @@ function About() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineMeta}>
+              <span className={styles.timelineDate}>Sep 2026 — Dec 2026</span>
+              <span className={styles.timelineCompany}>Electronic Arts — Madrid, Spain</span>
+            </div>
+            <div className={styles.timelineContent}>
+              <h3 className={styles.timelineRole}>Localization Tester (Seasonal Contract)</h3>
+              <p>
+                Performed localisation testing for FIFA / EA FC across Swedish and English markets.
+                Logged, tracked, and reproduced bugs using Jira in an agile team environment.
+                Collaborated with cross-functional QA and development teams to ensure linguistic
+                and functional quality.
+              </p>
+            </div>
+          </div>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineMeta}>
               <span className={styles.timelineDate}>Summers 2023, 2024, 2025, 2026</span>
               <span className={styles.timelineCompany}>Electronic Arts — Madrid, Spain</span>
             </div>

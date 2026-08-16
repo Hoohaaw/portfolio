@@ -23,6 +23,8 @@ import UXWayOfWorking from './pages/UXWayOfWorking.jsx';
 import ClimateAPI from './pages/ClimateAPI.jsx';
 import PasswordValidator from './pages/PasswordValidator.jsx';
 import IdleGame from './pages/IdleGame.jsx';
+import PartyWithMe from './pages/PartyWithMe.jsx';
+import IdleGameAgentic from './pages/IdleGameAgentic.jsx';
 import LocalizationQA from './pages/LocalizationQA.jsx';
 
 function SkipLink() {
@@ -46,6 +48,8 @@ function AnimatedRoutes() {
         <Route path="/projects/climate-api" element={<ClimateAPI />} />
         <Route path="/projects/password-validator" element={<PasswordValidator />} />
         <Route path="/projects/idle-game" element={<IdleGame />} />
+        <Route path="/projects/party-with-me" element={<PartyWithMe />} />
+        <Route path="/projects/idle-game-agentic" element={<IdleGameAgentic />} />
         <Route path="/projects/localization-qa" element={<LocalizationQA />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
