@@ -7,7 +7,7 @@ const webProjects = [
     to: '/projects/party-with-me',
     tag: 'React · Supabase · TS · Tailwind',
     title: 'Party With Me',
-    desc: 'Placeholder — description coming soon.',
+    desc: 'Built for a real external client as my capstone project for the Web Developer Programme at Linnéuniversitetet. A lightweight way for hosts to plan a kids’ birthday party.',
   },
   {
     to: '/projects/climate-api',
@@ -35,6 +35,21 @@ const agenticProjects = [
     tag: 'Agentic Coding',
     title: 'Idle Game — Agentic Rebuild',
     desc: 'Rebuilding the Idle Game with agentic coding — React, TypeScript, Tailwind & Supabase.',
+  },
+];
+
+const inProgressProjects = [
+  {
+    to: '/projects/vault-sync',
+    tag: 'Obsidian · Flutter · Dashboard',
+    title: 'Vault Sync',
+    desc: 'Building a sync tool between Obsidian, Flutter & a custom dashboard — starting with a shared to-do list.',
+  },
+  {
+    to: '/projects/homelab-dashboard',
+    tag: 'Grafana · Prometheus · Docker · TrueNAS Scale',
+    title: 'Homelab Dashboard',
+    desc: 'A self-hosted home server on TrueNAS Scale, with a monitoring dashboard tracking host and container vitals.',
   },
 ];
 
@@ -74,7 +89,11 @@ function Project() {
         <div className={styles.grid}>
           {webProjects.map((p, i) => (
             <Reveal key={p.to} delay={i * 80}>
-              <ProjectCard {...p} variant="dev" index={String(i + 1).padStart(2, '0')} />
+              <ProjectCard
+                {...p}
+                variant="dev"
+                index={String(i + 1).padStart(2, '0')}
+              />
             </Reveal>
           ))}
         </div>
@@ -87,7 +106,28 @@ function Project() {
         <div className={styles.grid}>
           {agenticProjects.map((p, i) => (
             <Reveal key={p.to} delay={i * 80}>
-              <ProjectCard {...p} variant="dev" index={String(i + 1).padStart(2, '0')} />
+              <ProjectCard
+                {...p}
+                variant="dev"
+                index={String(i + 1).padStart(2, '0')}
+              />
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Reveal>
+          <h2 className={styles.sectionLabel}>In Progress</h2>
+        </Reveal>
+        <div className={styles.grid}>
+          {inProgressProjects.map((p, i) => (
+            <Reveal key={p.to} delay={i * 80}>
+              <ProjectCard
+                {...p}
+                variant="dev"
+                index={String(i + 1).padStart(2, '0')}
+              />
             </Reveal>
           ))}
         </div>
@@ -100,7 +140,11 @@ function Project() {
         <div className={styles.grid}>
           {uxProjects.map((p, i) => (
             <Reveal key={p.to} delay={i * 80}>
-              <ProjectCard {...p} variant="ux" index={String(i + 1).padStart(2, '0')} />
+              <ProjectCard
+                {...p}
+                variant="ux"
+                index={String(i + 1).padStart(2, '0')}
+              />
             </Reveal>
           ))}
         </div>

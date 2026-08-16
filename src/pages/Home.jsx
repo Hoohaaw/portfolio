@@ -7,10 +7,16 @@ import { useLanguage } from '../i18n/languageStore.js';
 import {
   SiGraphql, SiNodedotjs, SiMongodb, SiTypescript, SiReact, SiElixir,
   SiTailwindcss, SiSupabase, SiObsidian, SiFlutter,
+  SiGrafana, SiPrometheus, SiDocker,
 } from 'react-icons/si';
 import { PiCertificateBold } from 'react-icons/pi';
 
 const GENAI_CERT_URL = encodeURI('/certificates/CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.pdf');
+const CLAUDE_101_URL = encodeURI('/certificates/Claude 101.pdf');
+const CLAUDE_CODE_101_URL = encodeURI('/certificates/Claude Code 101.pdf');
+const CLAUDE_PLATFORM_101_URL = encodeURI('/certificates/Claude Platform 101.pdf');
+const INTRO_MCP_URL = encodeURI('/certificates/Introduction to Model Context Protocol.pdf');
+const AI_FLUENCY_STUDENTS_URL = encodeURI('/certificates/AI Fluency for Students.pdf');
 
 function Home() {
   const { t } = useLanguage();
@@ -29,6 +35,10 @@ function Home() {
           icons: [<span key="b" className={styles.markerGlyph} />],
           text: t('now.workEA'),
         },
+        {
+          icons: [<span key="b2" className={styles.markerGlyph} />],
+          text: t('now.workEA2026'),
+        },
       ],
     },
     {
@@ -45,7 +55,11 @@ function Home() {
         },
         {
           icons: [<SiObsidian key="ob" color="#7c3aed" />, <SiFlutter key="fl" color="#02569b" />, <span key="db" className={styles.markerGlyph} />],
-          text: t('now.projectSync'),
+          text: <Link to="/projects/vault-sync">{t('now.projectSync')}</Link>,
+        },
+        {
+          icons: [<SiGrafana key="gf" color="#f46800" />, <SiPrometheus key="pr" color="#e6522c" />, <SiDocker key="dk" color="#2496ed" />],
+          text: <Link to="/projects/homelab-dashboard">{t('now.projectHomelab')}</Link>,
         },
       ],
     },
@@ -56,6 +70,26 @@ function Home() {
         {
           icons: [<PiCertificateBold key="c" color="#f5a623" />],
           text: <a href={GENAI_CERT_URL} target="_blank" rel="noreferrer">{t('now.certGenAI')}</a>,
+        },
+        {
+          icons: [<PiCertificateBold key="c1" />],
+          text: <a href={CLAUDE_101_URL} target="_blank" rel="noreferrer">{t('now.certClaude101')}</a>,
+        },
+        {
+          icons: [<PiCertificateBold key="c2" />],
+          text: <a href={CLAUDE_CODE_101_URL} target="_blank" rel="noreferrer">{t('now.certClaudeCode101')}</a>,
+        },
+        {
+          icons: [<PiCertificateBold key="c3" />],
+          text: <a href={CLAUDE_PLATFORM_101_URL} target="_blank" rel="noreferrer">{t('now.certClaudePlatform101')}</a>,
+        },
+        {
+          icons: [<PiCertificateBold key="c4" />],
+          text: <a href={INTRO_MCP_URL} target="_blank" rel="noreferrer">{t('now.certIntroMcp')}</a>,
+        },
+        {
+          icons: [<PiCertificateBold key="c5" />],
+          text: <a href={AI_FLUENCY_STUDENTS_URL} target="_blank" rel="noreferrer">{t('now.certAiFluencyStudents')}</a>,
         },
       ],
       link: { to: '/certificates', text: t('now.certLink') },

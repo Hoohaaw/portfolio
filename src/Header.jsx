@@ -11,6 +11,7 @@ function Header() {
       <div className={styles.inner}>
         <NavLink to="/" className={styles.logo} end>AP</NavLink>
         <ul>
+          <li><NavLink to="/" end className={({ isActive }) => isActive ? styles.active : ''}>{t('nav.home')}</NavLink></li>
           <li><NavLink to="/projects" className={({ isActive }) => isActive ? styles.active : ''}>{t('nav.projects')}</NavLink></li>
           <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ''}>{t('nav.about')}</NavLink></li>
           <li><NavLink to="/contact" className={({ isActive }) => isActive ? styles.active : ''}>{t('nav.contact')}</NavLink></li>
