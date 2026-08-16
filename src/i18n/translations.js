@@ -7,6 +7,7 @@
  */
 export const translations = {
   en: {
+    'nav.home': 'Home',
     'nav.projects': 'Projects',
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -15,7 +16,7 @@ export const translations = {
     'footer.github': 'GitHub',
     'footer.email': 'Email',
 
-    'hero.available': 'Available for work',
+    'hero.available': 'Available for work from early 2027',
     'hero.viewProjects': 'View Projects',
     'hero.aboutMe': 'About Me',
     'hero.downloadCv': 'Download CV',
@@ -35,9 +36,11 @@ export const translations = {
     'now.workStatus': 'Open to new opportunities',
     'now.workStatusRest': '— actively looking for work',
     'now.workEA': 'Localization Tester (seasonal) — Electronic Arts, Madrid — Summers 2023–2026',
-    'now.projectClimateApi': 'Building a GraphQL Climate API — Node.js, Apollo Server, MongoDB & Vercel',
-    'now.projectIdleAgentic': 'Rebuilding the Idle Game with agentic coding — React, TypeScript, Tailwind & Supabase',
-    'now.projectSync': 'Building a sync tool between Obsidian, Flutter & a custom dashboard — starting with a shared to-do list',
+    'now.workEA2026': 'Localization Tester (seasonal contract) — Electronic Arts, Madrid — Sep–Dec 2026',
+    'now.projectClimateApi': 'Climate API — a GraphQL API serving historical climate data',
+    'now.projectIdleAgentic': 'Idle Game — Agentic Rebuild — an AI-assisted rebuild of the original Idle Game',
+    'now.projectSync': 'Vault Sync — syncing Obsidian, Flutter & a dashboard, starting with a shared to-do list',
+    'now.projectHomelab': 'Homelab Dashboard — a self-hosted server tracking live system vitals',
     'now.certEmpty': 'Nothing published yet — coming soon.',
     'now.certLink': 'View certificates',
     'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',
@@ -65,6 +68,7 @@ export const translations = {
     'lang.switchTo': 'Byt till svenska',
   },
   sv: {
+    'nav.home': 'Hem',
     'nav.projects': 'Projekt',
     'nav.about': 'Om mig',
     'nav.contact': 'Kontakt',
@@ -73,7 +77,7 @@ export const translations = {
     'footer.github': 'GitHub',
     'footer.email': 'E-post',
 
-    'hero.available': 'Tillgänglig för arbete',
+    'hero.available': 'Tillgänglig för arbete från början av 2027',
     'hero.viewProjects': 'Visa projekt',
     'hero.aboutMe': 'Om mig',
     'hero.downloadCv': 'Ladda ner CV',
@@ -93,9 +97,11 @@ export const translations = {
     'now.workStatus': 'Öppen för nya möjligheter',
     'now.workStatusRest': '— söker aktivt arbete',
     'now.workEA': 'Lokaliseringstestare (säsong) — Electronic Arts, Madrid — Somrarna 2023–2026',
-    'now.projectClimateApi': 'Bygger ett GraphQL-klimat-API — Node.js, Apollo Server, MongoDB & Vercel',
-    'now.projectIdleAgentic': 'Bygger om Idle Game med agentisk kodning — React, TypeScript, Tailwind & Supabase',
-    'now.projectSync': 'Bygger ett synkverktyg mellan Obsidian, Flutter & en egen dashboard — börjar med en delad att-göra-lista',
+    'now.workEA2026': 'Lokaliseringstestare (säsongskontrakt) — Electronic Arts, Madrid — Sep–Dec 2026',
+    'now.projectClimateApi': 'Climate API — ett GraphQL-API som serverar historisk klimatdata',
+    'now.projectIdleAgentic': 'Idle Game — Agentic Rebuild — en AI-assisterad ombyggnad av det ursprungliga Idle Game',
+    'now.projectSync': 'Vault Sync — synkar Obsidian, Flutter & en dashboard, börjar med en delad att-göra-lista',
+    'now.projectHomelab': 'Homelab Dashboard — en självhostad server som visar systemets status i realtid',
     'now.certEmpty': 'Inget publicerat än — kommer snart.',
     'now.certLink': 'Visa certifikat',
     'now.certGenAI': 'Career Essentials in Generative AI — Microsoft & LinkedIn',

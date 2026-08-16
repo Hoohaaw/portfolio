@@ -25,6 +25,8 @@ import PasswordValidator from './pages/PasswordValidator.jsx';
 import IdleGame from './pages/IdleGame.jsx';
 import PartyWithMe from './pages/PartyWithMe.jsx';
 import IdleGameAgentic from './pages/IdleGameAgentic.jsx';
+import VaultSync from './pages/VaultSync.jsx';
+import HomelabDashboard from './pages/HomelabDashboard.jsx';
 import LocalizationQA from './pages/LocalizationQA.jsx';
 
 function SkipLink() {
@@ -50,6 +52,8 @@ function AnimatedRoutes() {
         <Route path="/projects/idle-game" element={<IdleGame />} />
         <Route path="/projects/party-with-me" element={<PartyWithMe />} />
         <Route path="/projects/idle-game-agentic" element={<IdleGameAgentic />} />
+        <Route path="/projects/vault-sync" element={<VaultSync />} />
+        <Route path="/projects/homelab-dashboard" element={<HomelabDashboard />} />
         <Route path="/projects/localization-qa" element={<LocalizationQA />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
