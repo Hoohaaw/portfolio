@@ -37,11 +37,11 @@ function Home() {
       items: [
         {
           icons: [<SiGraphql key="g" color="#e535ab" />, <SiNodedotjs key="n" color="#539e43" />, <SiMongodb key="m" color="#47a248" />],
-          text: t('now.projectClimateApi'),
+          text: <Link to="/projects/climate-api">{t('now.projectClimateApi')}</Link>,
         },
         {
           icons: [<SiReact key="r" color="#61dafb" />, <SiTypescript key="t" color="#3178c6" />, <SiTailwindcss key="tw" color="#38bdf8" />, <SiSupabase key="sb" color="#3ecf8e" />],
-          text: t('now.projectIdleAgentic'),
+          text: <Link to="/projects/idle-game-agentic">{t('now.projectIdleAgentic')}</Link>,
         },
         {
           icons: [<SiObsidian key="ob" color="#7c3aed" />, <SiFlutter key="fl" color="#02569b" />, <span key="db" className={styles.markerGlyph} />],

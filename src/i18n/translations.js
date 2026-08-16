@@ -15,7 +15,7 @@ export const translations = {
     'footer.github': 'GitHub',
     'footer.email': 'Email',
 
-    'hero.available': 'Available for work',
+    'hero.available': 'Available for work from early 2027',
     'hero.viewProjects': 'View Projects',
     'hero.aboutMe': 'About Me',
     'hero.downloadCv': 'Download CV',
@@ -73,7 +73,7 @@ export const translations = {
     'footer.github': 'GitHub',
     'footer.email': 'E-post',
 
-    'hero.available': 'Tillgänglig för arbete',
+    'hero.available': 'Tillgänglig för arbete från början av 2027',
     'hero.viewProjects': 'Visa projekt',
     'hero.aboutMe': 'Om mig',
     'hero.downloadCv': 'Ladda ner CV',
