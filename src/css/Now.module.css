@@ -92,18 +92,26 @@
 }
 
 .statusDot {
+  position: relative;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background: var(--color-accent-2);
-  box-shadow: 0 0 0 0 var(--color-accent-2-a55);
+}
+
+.statusDot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--color-accent-2-a55);
   animation: statusPulse 2.4s ease-out infinite;
 }
 
 @keyframes statusPulse {
-  0% { box-shadow: 0 0 0 0 var(--color-accent-2-a55); }
-  70% { box-shadow: 0 0 0 7px var(--color-accent-2-a0); }
-  100% { box-shadow: 0 0 0 0 var(--color-accent-2-a0); }
+  0% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(2.6); opacity: 0; }
+  100% { transform: scale(2.6); opacity: 0; }
 }
 
 /* Non-brand marker — instrument-panel square tick, replaces mismatched icon-library glyphs */
