@@ -5,6 +5,9 @@ import './css/tokens.css';
 import './css/index.css';
 import App from './App.jsx';
 
+const asyncFontLink = document.getElementById('google-fonts-async');
+if (asyncFontLink) asyncFontLink.media = 'all';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

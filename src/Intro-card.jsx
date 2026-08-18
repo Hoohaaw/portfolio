@@ -36,7 +36,19 @@ function Card() {
 
       <div className={styles.heroPanel}>
         <figure className={styles.figure}>
-          <img src="/images/ProfilePic.png" alt="Alex Palm" className={styles.profilePhoto} />
+          <picture>
+            <source srcSet="/images/ProfilePic.avif" type="image/avif" />
+            <source srcSet="/images/ProfilePic.webp" type="image/webp" />
+            <img
+              src="/images/ProfilePic.png"
+              alt="Alex Palm"
+              className={styles.profilePhoto}
+              width="350"
+              height="466"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           <span className={`${styles.bracket} ${styles.bracketTl}`} aria-hidden="true" />
           <span className={`${styles.bracket} ${styles.bracketTr}`} aria-hidden="true" />
           <span className={`${styles.bracket} ${styles.bracketBl}`} aria-hidden="true" />

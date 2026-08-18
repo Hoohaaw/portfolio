@@ -1,0 +1,24 @@
+# Alex Palm Portfolio
+
+> Alex Palm — Fullstack Developer and UX Designer. Portfolio showcasing web development projects and UX case studies (React, Node.js, GraphQL APIs, and more).
+
+## Pages
+
+- [Home](https://www.alexpalmportfolio.com/): Landing page and introduction.
+- [About](https://www.alexpalmportfolio.com/about): Background, skills, and experience.
+- [Projects](https://www.alexpalmportfolio.com/projects): List of case studies and projects.
+- [Contact](https://www.alexpalmportfolio.com/contact): Contact information.
+- [Certificates](https://www.alexpalmportfolio.com/certificates): Completed courses and certifications.
+
+## Projects
+
+- [Self-Service Product Change](https://www.alexpalmportfolio.com/projects/self-service-product-change)
+- [Tillgänglighet](https://www.alexpalmportfolio.com/projects/tillganglighet)
+- [UX Way of Working](https://www.alexpalmportfolio.com/projects/ux-way-of-working)
+- [Climate API](https://www.alexpalmportfolio.com/projects/climate-api)
+- [Password Validator](https://www.alexpalmportfolio.com/projects/password-validator)
+- [Idle Game](https://www.alexpalmportfolio.com/projects/idle-game)
+- [Party With Me](https://www.alexpalmportfolio.com/projects/party-with-me)
+- [Idle Game Agentic](https://www.alexpalmportfolio.com/projects/idle-game-agentic)
+- [Vault Sync](https://www.alexpalmportfolio.com/projects/vault-sync)
+- [Homelab Dashboard](https://www.alexpalmportfolio.com/projects/homelab-dashboard)

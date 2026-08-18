@@ -124,7 +124,7 @@ function Home() {
                     delay={i * 70}
                     className={`${styles.item} ${item.status ? styles.itemStatus : ''}`}
                   >
-                    <span className={styles.iconGroup}>{item.icons}</span>
+                    <span className={styles.iconGroup} aria-hidden="true">{item.icons}</span>
                     <span className={styles.itemText}>{item.text}</span>
                   </Reveal>
                 ))}
