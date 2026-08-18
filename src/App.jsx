@@ -29,6 +29,7 @@ const PartyWithMe = lazy(() => import('./pages/PartyWithMe.jsx'));
 const IdleGameAgentic = lazy(() => import('./pages/IdleGameAgentic.jsx'));
 const VaultSync = lazy(() => import('./pages/VaultSync.jsx'));
 const HomelabDashboard = lazy(() => import('./pages/HomelabDashboard.jsx'));
+const LocalizationQA = lazy(() => import('./pages/LocalizationQA.jsx'));
 
 function SkipLink() {
   const { t } = useLanguage();
@@ -56,6 +57,7 @@ function AnimatedRoutes() {
           <Route path="/projects/idle-game-agentic" element={<IdleGameAgentic />} />
           <Route path="/projects/vault-sync" element={<VaultSync />} />
           <Route path="/projects/homelab-dashboard" element={<HomelabDashboard />} />
+          <Route path="/projects/localization-qa" element={<LocalizationQA />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
